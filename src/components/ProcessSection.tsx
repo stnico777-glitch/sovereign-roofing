@@ -42,26 +42,27 @@ export function ProcessSection() {
     >
       <div className="mx-auto max-w-6xl">
         <header className="mb-4 md:mb-6">
-          <div className="relative mx-auto flex min-h-[14rem] min-w-0 flex-col items-center justify-center px-2 py-4 sm:min-h-[15rem] md:min-h-[17rem]">
+          <div className="relative mx-auto flex min-h-[13rem] min-w-0 flex-col items-center justify-center overflow-visible px-2 py-3 sm:min-h-[15rem] md:min-h-[16rem]">
             <Image
-              src="/process-hardhat.png"
+              src="/process-hardhat.png?v=2"
               alt=""
-              width={1024}
-              height={571}
-              className="pointer-events-none absolute left-1/2 top-[22%] z-0 h-[min(15rem,78vw)] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 bg-transparent object-contain opacity-90 sm:h-[min(17rem,72vw)] md:top-[18%] md:h-[min(20rem,58vw)]"
-              sizes="(max-width: 768px) 78vw, 58vw"
+              width={1152}
+              height={928}
+              unoptimized
+              className="pointer-events-none absolute left-1/2 top-[4%] z-0 h-[min(10rem,52vw)] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 bg-transparent object-contain opacity-90 sm:h-[min(11rem,48vw)] md:top-[3%] md:h-[min(12.5rem,38vw)]"
+              sizes="(max-width: 768px) 52vw, 38vw"
               priority
             />
             <Reveal
-              className="relative z-10 flex w-full max-w-2xl flex-col items-center pt-6 text-center sm:pt-7 md:pt-8"
+              className="relative z-10 flex w-full max-w-2xl flex-col items-center pt-8 text-center sm:pt-9 md:pt-10"
               from="up"
             >
-              <p className="font-sans text-[0.75rem] font-medium tracking-[0.28em] text-accent uppercase drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+              <p className="font-sans text-[0.75rem] font-medium tracking-[0.28em] text-accent uppercase">
                 {p.eyebrow}
               </p>
               <h2
                 id="process-heading"
-                className="text-display mt-3 text-3xl font-bold leading-tight text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.9),0_8px_32px_rgba(0,0,0,0.55)] md:text-4xl"
+                className="text-display mt-3 text-3xl font-bold leading-tight text-foreground md:text-4xl"
               >
                 {p.title}
               </h2>
@@ -163,7 +164,7 @@ export function ProcessSection() {
           </p>
           <Link
             href={routes.contact}
-            className="shrink-0 rounded-full border border-accent/40 bg-accent px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-slate-950 uppercase transition hover:bg-accent/90"
+            className="shrink-0 rounded-full border border-accent/40 bg-accent px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-white uppercase transition hover:bg-accent/90"
           >
             {copy.ui.processCta}
           </Link>

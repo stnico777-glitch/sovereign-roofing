@@ -16,7 +16,7 @@ export function ContactSection() {
   return (
     <footer
       id="footer"
-      className="scroll-mt-24 border-t border-white/10 bg-footer px-[var(--container-pad)] py-[var(--section-y)] text-foreground"
+      className="scroll-mt-24 border-t border-border bg-footer px-[var(--container-pad)] py-[var(--section-y)] text-foreground"
     >
       <div className="mx-auto max-w-6xl">
         {!isContactPage && (
@@ -61,7 +61,7 @@ export function ContactSection() {
         )}
 
         <nav
-          className={`flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-10 font-sans text-xs tracking-[0.2em] text-foreground/55 ${isContactPage ? "" : "mt-12"}`}
+          className={`flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-10 font-sans text-xs tracking-[0.2em] text-foreground/55 ${isContactPage ? "" : "mt-12"}`}
           aria-label={copy.ui.footerNavAria}
         >
           {copy.nav.map((item) => (
@@ -75,7 +75,7 @@ export function ContactSection() {
           ))}
         </nav>
 
-        <div className="mt-14 border-t border-white/10 pt-12 md:mt-16">
+        <div className="mt-14 border-t border-border pt-12 md:mt-16">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <h2 className="flex items-center gap-2 text-display text-lg font-semibold text-foreground md:text-xl">
               <IconMapPin className="h-5 w-5 shrink-0 text-accent" aria-hidden />
@@ -93,7 +93,7 @@ export function ContactSection() {
               src={copy.locationPage.mapEmbedSrc}
               title={copy.ui.mapIframeTitle}
               caption={copy.locationPage.mapCaption}
-              className="border-white/12 bg-white/[0.04] ring-white/10"
+              className="border-border bg-surface-muted ring-border"
             />
           </div>
         </div>

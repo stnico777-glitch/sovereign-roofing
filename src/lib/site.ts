@@ -15,7 +15,7 @@ export const routes = {
 } as const;
 
 export const defaultTitle =
-  "Centric Group — Plans, Permits & Interior Remodeling in South Florida";
+  "Sovereign Roofing — Residential Roofing in South Florida";
 
 export const defaultDescription =
-  "Architectural plans, permits, kitchen and bath remodels, tile, and drywall. Centric Group delivers clear communication from drawings to finished space.";
+  "Roof replacement, repairs, inspections, and storm-ready systems. Sovereign Roofing delivers honest estimates, clean job sites, and workmanship you can see from the curb.";

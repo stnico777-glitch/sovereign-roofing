@@ -5,8 +5,8 @@ const contactHref = routes.contact;
 
 /** Spanish site copy — structure mirrors `siteCopy` (English). */
 export const siteCopyEs: SiteCopy = {
-  brand: "Centric",
-  headerBrand: "Centric Group",
+  brand: "Sovereign",
+  headerBrand: "Sovereign Roofing",
   nav: [
     { label: "Proyectos", href: routes.projects },
     { label: "Servicios", href: routes.services },
@@ -30,7 +30,7 @@ export const siteCopyEs: SiteCopy = {
       {
         id: "2",
         rating: 5,
-        text: "Hemos trabajado con varios contratistas: la comunicación de Centric fue la mejor. El yeso y la preparación para pintura quedaron perfectos; la lista de pendientes fue corta.",
+        text: "Hemos trabajado con varios techadores: la comunicación de Sovereign fue la mejor. El equipo llegó a tiempo, la limpieza fue impecable y el techo nuevo se ve excelente.",
         publishTime: "2025-01-08T10:00:00.000Z",
         authorName: "Sarah Chen",
       },
@@ -62,21 +62,21 @@ export const siteCopyEs: SiteCopy = {
   heroLeadingMark: "",
   hero: {
     subhead:
-      "DESDE PLANOS ARQUITECTÓNICOS Y PERMISOS HASTA COCINAS, BAÑOS, AZULEJO Y YESO TERMINADOS.",
+      "DESDE INSPECCIONES Y REPARACIONES HASTA REEMPLAZOS COMPLETOS — TEJA, METAL Y SISTEMAS LISTOS PARA TORMENTAS.",
     ctaPrimary: "VER PROYECTOS",
     ctaSecondary: "SOLICITAR PRESUPUESTO",
   },
   review: {
     stat: "+150",
     body: "renovaciones e interiores completados con propietarios que vuelven para la siguiente habitación.",
-    initials: ["CG", "JM", "RK", "AL", "TP"],
+    initials: ["SR", "JM", "RK", "AL", "TP"],
   },
   vision: {
     eyebrow: "Colaboración",
-    headlineBefore: "Donde tus planos",
-    headlineAfter: "se convierten en un espacio terminado.",
+    headlineBefore: "Donde tu techo",
+    headlineAfter: "recibe la protección que merece.",
     body:
-      "Te ayudamos a pasar de dibujos y permisos a una cocina, baño, azulejo y yeso terminados, con cronogramas con los que puedes planificar y acabados de los que te sentirás orgulloso.",
+      "Te guiamos por hallazgos de inspección, opciones de materiales y un cronograma claro — desde goteras y reemplazos parciales hasta techos completos pensados para viento y lluvia del Sur de Florida.",
     quoteFormTitle: "Solicita tu presupuesto",
     quoteFields: {
       name: "Tu nombre",
@@ -87,46 +87,46 @@ export const siteCopyEs: SiteCopy = {
     quoteProjectTypeLabel: "Tipo de proyecto",
     quoteProjectTypes: [
       { value: "", label: "Selecciona el tipo de proyecto" },
-      { value: "plans-permits", label: "Planos y permisos" },
-      { value: "kitchen", label: "Remodelación de cocina" },
-      { value: "bath", label: "Remodelación de baño" },
-      { value: "tile", label: "Azulejo y pisos" },
-      { value: "drywall", label: "Yeso e interiores" },
-      { value: "full-remodel", label: "Remodelación completa / varias habitaciones" },
+      { value: "replacement", label: "Reemplazo completo de techo" },
+      { value: "repair", label: "Reparación / gotera" },
+      { value: "inspection", label: "Inspección / presupuesto" },
+      { value: "storm", label: "Tormenta o seguro" },
+      { value: "metal", label: "Techo metálico o especial" },
+      { value: "gutters", label: "Canaletas / regletas" },
       { value: "other", label: "Otro — descríbelo en el correo" },
     ],
     quoteCta: "Obtener presupuesto",
   },
   process: {
     eyebrow: "Cómo trabajamos",
-    title: "De la primera conversación a la entrega final",
+    title: "De la primera llamada a la entrega final",
     subtitle:
-      "Los sitios de remodelación premium ganan cuando los propietarios ven un proceso repetible: alcance, documentación, calidad de obra y comunicación. Este es el nuestro.",
+      "Un techo es un sistema: cubierta, base, regletas y ventilación. Así mantenemos claro el alcance, la seguridad y la comunicación del presupuesto al cierre.",
     steps: [
       {
-        title: "Descubrimiento y alcance",
+        title: "Inspección y alcance",
         description:
-          "Recorremos el espacio, alineamos objetivos, presupuesto y plazos, y documentamos qué es el éxito antes de pedir material o cortar nada.",
+          "Evaluamos la cubierta, penetraciones y drenaje; documentamos qué repara frente a qué reemplaza — con fotos que puedes revisar.",
       },
       {
-        title: "Planos e ingeniería",
+        title: "Presupuesto y materiales",
         description:
-          "Los planos arquitectónicos y los detalles se mantienen coordinados con estructura, MEP y acabados para que el equipo de obra no tenga que adivinar.",
+          "Opciones de teja o metal, bases y garantías para que la propuesta coincida con tu presupuesto y exposición a tormentas.",
       },
       {
-        title: "Permisos y cumplimiento",
+        title: "Permisos y agenda",
         description:
-          "Paquetes de permisos, presentaciones y seguimiento con el municipio: el trabajo que empieza es trabajo aprobado.",
+          "Coordinamos requisitos municipales y fechas de obra para que el desmontaje y el cierre al seco sigan el orden correcto.",
       },
       {
-        title: "Obra y protección",
+        title: "Instalación",
         description:
-          "Rutas protegidas, contención de polvo y coordinación diaria en obra: cocina, baño, azulejo, yeso y acabados según especificación.",
+          "Cuadrillas siguiendo especificaciones del fabricante en clavado, regletas y ventilación — con control de escombros cada día.",
       },
       {
-        title: "Inspecciones y entrega",
+        title: "Inspección final y entrega",
         description:
-          "Obra lista para inspección, lista de pendientes corta y recorrido final para que estés tranquilo antes de cerrar el trabajo.",
+          "Recorremos el techo terminado contigo, confirmamos la limpieza y dejamos notas de garantía y cuidado.",
       },
     ],
     trustLine:
@@ -135,8 +135,8 @@ export const siteCopyEs: SiteCopy = {
   portfolio: {
     title: "Proyectos seleccionados",
     subtitle:
-      "Cocinas, baños, azulejo, yeso e interiores que hemos planificado, permisado y construido.",
-    row2Subtitle: "Más remodelaciones, azulejo y detalles de acabado de trabajos recientes.",
+      "Reemplazos, reparaciones y techos nuevos que hemos completado en el Sur de Florida.",
+    row2Subtitle: "Más trabajos de techado y exterior recientes.",
     reelVideoSrc: "/hero.mp4",
     reelVideoSrc2: "/hero-reversed.mp4",
     reelBridgeTitle: "En obra",
@@ -144,69 +144,67 @@ export const siteCopyEs: SiteCopy = {
   offers: {
     title: "Servicios",
     subtitle:
-      "Planos arquitectónicos, permisos y oficio interior: cocina, baño, azulejo y yeso.",
+      "Techado residencial: reemplazo, reparación y sistemas listos para tormentas.",
     items: [
       {
-        title: "Planos arquitectónicos",
+        title: "Reemplazo de techo",
         description:
-          "Dibujos y coordinación para que tu remodelación sea clara, alineada al código y lista para construir: distribución, detalles y revisiones que mantienen el avance.",
-        cta: "Hablar de tus planos",
+          "Desmontaje completo y techo nuevo con base, regletas y ventilación según especificación del fabricante y código local.",
+        cta: "Hablar de reemplazo",
       },
       {
-        title: "Permisos",
+        title: "Reparaciones y goteras",
         description:
-          "Paquetes de permisos, presentaciones y seguimiento con el municipio para que el trabajo aprobado arranque a tiempo y las inspecciones sean claras.",
-        cta: "Consultar sobre permisos",
+          "Arreglos puntuales por tormenta, valles gastados, fallas de regleta y penetraciones — con fotos y alcance claro antes de empezar.",
+        cta: "Solicitar reparación",
       },
       {
-        title: "Cocina",
+        title: "Teja asfáltica",
         description:
-          "Remodelaciones completas de cocina: distribución, gabinetes, encimeras, iluminación y acabados, pensados para el uso diario y un aspecto duradero.",
-        cta: "Planificar una cocina",
+          "Tejas arquitectónicas y de diseño con calificaciones de viento para exposición costera — color y garantía explicados al inicio.",
+        cta: "Ver opciones de teja",
       },
       {
-        title: "Baño",
+        title: "Techo metálico",
         description:
-          "Baños desde actualizaciones hasta renovaciones totales: impermeabilización, grifería, ventilación y acabados bien hechos.",
-        cta: "Planificar un baño",
+          "Paneles y costuras para durabilidad y líneas limpias — ideal si buscas larga vida y poco mantenimiento.",
+        cta: "Preguntar por metal",
       },
       {
-        title: "Azulejo",
+        title: "Inspecciones",
         description:
-          "Pisos, muros, duchas, salpicaderos y diseños personalizados con líneas rectas, buena preparación y lechada que aguanta.",
-        cta: "Ver opciones de azulejo",
+          "Evaluaciones honestas para compraventa, seguro o tranquilidad — qué es urgente, qué puede esperar y qué presupuestar.",
+        cta: "Agendar inspección",
       },
       {
-        title: "Yeso",
+        title: "Tormenta y seguro",
         description:
-          "Colocación, cinta, acabado y textura a juego, más reparaciones, para que paredes y techos queden lisos y listos para pintar.",
-        cta: "Solicitar yeso",
+          "Documentación y apoyo de coordinación tras viento o granizo — te ayudamos a entender el alcance junto a tu ajustador.",
+        cta: "Ayuda por tormenta",
       },
     ],
   },
   about: {
     title: "Nosotros",
     body: [
-      "Planos, permisos e interiores — cocinas, baños, azulejo y yeso — con comunicación clara desde el recorrido hasta la lista de pendientes.",
+      "Sovereign Roofing se enfoca en techos residenciales — reemplazo, reparación y recuperación por tormentas — con comunicación clara de la inspección a la entrega final.",
     ],
     credentials: "Licenciados y asegurados · Sur de Florida",
-    cta: "Trabajar con Centric",
-    portraitSrc: "/partnership-blueprint.png",
-    portraitAlt: "Plano enrollado — planos arquitectónicos y colaboración en el proyecto",
+    cta: "Trabajar con Sovereign",
     quote: "Plazos honestos. Acabados que notas cada día.",
   },
   contact: {
     title: "Contacto",
     body:
-      "Cuéntanos sobre tus planos, permisos o próximo proyecto de cocina, baño, azulejo o yeso: te responderemos con los siguientes pasos.",
+      "Cuéntanos sobre tu techo — reemplazo, gotera, inspección o reclamo por tormenta: te responderemos con los siguientes pasos.",
     quoteLead:
-      "Planos, permisos o remodelación: respondemos con los siguientes pasos.",
+      "Proyecto o duda sobre el techo: respondemos con los siguientes pasos.",
     email: "Centricgroup.us@gmail.com",
   },
   locationPage: {
     title: "Ubicación y zona de servicio",
     lead:
-      "Centric Group trabaja con propietarios en todo el Sur de Florida: desde planos y permisos hasta cocina, baño, azulejo y yeso.",
+      "Sovereign Roofing trabaja con propietarios en todo el Sur de Florida: reemplazo de techo, reparaciones, inspecciones y apoyo por tormentas.",
     body: [
       "Coordinamos visitas al sitio, trámites municipales y cronogramas de producción para que tu proyecto siga avanzando.",
       "Escríbenos desde la página de contacto para hablar de tu dirección, plazo y alcance.",
@@ -217,12 +215,12 @@ export const siteCopyEs: SiteCopy = {
     serviceAreasHeading: "Zonas que atendemos",
     serviceAreasFootnote:
       "¿No ves tu zona? Contáctanos: a menudo coordinamos proyectos entre condados cuando el alcance lo amerita.",
-    schemaItemListName: "Centric Group — Zonas de servicio en el Sur de Florida",
+    schemaItemListName: "Sovereign Roofing — Zonas de servicio en el Sur de Florida",
     schemaItemListDescription:
-      "Ciudades y condados donde Centric Group ofrece planos, permisos, remodelación de cocina y baño, azulejo y yeso.",
+      "Ciudades y condados donde Sovereign Roofing ofrece techado residencial, reparaciones e inspecciones.",
   },
   footer: {
-    rights: "Centric Group",
+    rights: "Sovereign Roofing",
     location: "Miami · Sur de Florida",
     mapHeading: "Zona de servicio",
     mapLinkLabel: "Página de ubicación",
@@ -232,8 +230,8 @@ export const siteCopyEs: SiteCopy = {
     navAriaMobile: "Principal (móvil)",
     footerNavAria: "Pie de página",
     introAria: "Introducción",
-    headerBrandHomeAria: "Inicio de Centric Group",
-    mapIframeTitle: "Mapa de Florida — zona de servicio de Centric Group",
+    headerBrandHomeAria: "Inicio de Sovereign Roofing",
+    mapIframeTitle: "Mapa de Florida — zona de servicio de Sovereign Roofing",
     offersEyebrow: "Lo que hacemos",
     aboutEyebrow: "Quiénes somos",
     processCta: "Iniciar una conversación",
@@ -255,13 +253,13 @@ export const siteCopyEs: SiteCopy = {
     reviewsEmptyHint: "Añade reseñas en",
     reviewsEmptyCode: "siteCopy.googleReviews.reviews",
     locationDetailParagraph:
-      "Centric Group ofrece planos arquitectónicos, coordinación de permisos y remodelación de interiores — incluidas cocinas y baños, instalación de azulejo y yeso — en Miami-Dade, Broward, Palm Beach y comunidades selectas del condado de Monroe. Usa el directorio siguiente para encontrar tu ciudad o condado.",
+      "Sovereign Roofing ofrece reemplazo y reparación de techos residenciales, inspecciones y apoyo con documentación por tormentas en Miami-Dade, Broward, Palm Beach y comunidades selectas del condado de Monroe. Usa el directorio siguiente para encontrar tu ciudad o condado.",
     locationDirectoryIntro:
       "{count} ciudades y condados en el Sur de Florida: cada una con contexto local para quienes buscan contratistas de remodelación, ayuda con permisos y obra interior cerca de ti.",
     locationPhotoCredit:
       "Las fotos de zona son stock del Sur de Florida (p. ej. Miami Beach, Hollywood FL, Boynton Beach, Keys) de",
     locationPhotoCreditSuffix:
-      ", guardadas en el sitio; pide fotos de proyectos Centric terminados en tu ciudad.",
+      ", guardadas en el sitio; pide fotos de proyectos Sovereign Roofing terminados en tu ciudad.",
     locationCoverageMapHeading: "Mapa de cobertura",
     locationContactLine: "Contáctanos",
     locationContactSuffix: "con la dirección de tu proyecto.",
@@ -270,7 +268,7 @@ export const siteCopyEs: SiteCopy = {
       "Esta página no existe. Vuelve al inicio o explora servicios y proyectos.",
     notFoundHome: "Inicio",
     notFoundContact: "Contacto",
-    quoteEmailSubject: "Solicitud de presupuesto — Centric Group",
+    quoteEmailSubject: "Solicitud de presupuesto — Sovereign Roofing",
     quoteEmailName: "Nombre",
     quoteEmailEmail: "Correo",
     quoteEmailPhone: "Teléfono",

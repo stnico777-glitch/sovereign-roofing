@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "About Centric Group",
-  "Learn how Centric Group delivers plans, permits, and interior remodeling with clear communication from walkthrough to punch list.",
+  "About Sovereign Roofing",
+  "Learn how Sovereign Roofing approaches roof replacement, repairs, and inspections with clear communication from estimate to final walkthrough.",
   routes.about,
 );
 

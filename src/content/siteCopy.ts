@@ -1,8 +1,8 @@
 import { routes } from "@/lib/site";
 
 export const siteCopy = {
-  brand: "Centric",
-  headerBrand: "Centric Group",
+  brand: "Sovereign",
+  headerBrand: "Sovereign Roofing",
   /** Primary navigation — each item is a real route for SEO */
   nav: [
     { label: "Projects", href: routes.projects },
@@ -27,7 +27,7 @@ export const siteCopy = {
       {
         id: "2",
         rating: 5,
-        text: "We’ve used several contractors — Centric’s communication was the best. Drywall and paint prep were flawless; punch list was short.",
+        text: "We’ve used several roofers — Sovereign’s communication was the best. Crew was on time, cleanup was thorough, and the new roof looks sharp.",
         publishTime: "2025-01-08T10:00:00.000Z",
         authorName: "Sarah Chen",
       },
@@ -59,21 +59,21 @@ export const siteCopy = {
   heroLeadingMark: "",
   hero: {
     subhead:
-      "FROM ARCHITECTURAL PLANS AND PERMITS TO FINISHED KITCHENS, BATHS, TILE, AND DRYWALL.",
+      "FROM INSPECTIONS AND REPAIRS TO FULL REPLACEMENTS — SHINGLE, METAL, AND STORM-READY SYSTEMS.",
     ctaPrimary: "VIEW PROJECTS",
     ctaSecondary: "REQUEST A BID",
   },
   review: {
     stat: "+150",
     body: "renovations and interiors completed with owners who come back for the next room.",
-    initials: ["CG", "JM", "RK", "AL", "TP"],
+    initials: ["SR", "JM", "RK", "AL", "TP"],
   },
   vision: {
     eyebrow: "Partnership",
-    headlineBefore: "Where your plans",
-    headlineAfter: "become a finished space.",
+    headlineBefore: "Where your roof",
+    headlineAfter: "gets the protection it deserves.",
     body:
-      "We help you move from drawings and permits to a completed kitchen, bath, tile, and drywall — with schedules you can plan around and finishes you’ll be proud to show off.",
+      "We walk you through inspection findings, material options, and a clear timeline — from leak repairs and partial replacements to full re-roofs built for South Florida wind and rain.",
     quoteFormTitle: "Get your quote",
     quoteFields: {
       name: "Your name",
@@ -84,12 +84,12 @@ export const siteCopy = {
     quoteProjectTypeLabel: "Project type",
     quoteProjectTypes: [
       { value: "", label: "Select project type" },
-      { value: "plans-permits", label: "Plans & permits" },
-      { value: "kitchen", label: "Kitchen remodel" },
-      { value: "bath", label: "Bath remodel" },
-      { value: "tile", label: "Tile & flooring" },
-      { value: "drywall", label: "Drywall & interiors" },
-      { value: "full-remodel", label: "Full remodel / multiple rooms" },
+      { value: "replacement", label: "Full roof replacement" },
+      { value: "repair", label: "Repair / leak" },
+      { value: "inspection", label: "Inspection / estimate" },
+      { value: "storm", label: "Storm or insurance claim" },
+      { value: "metal", label: "Metal or specialty roofing" },
+      { value: "gutters", label: "Gutters / flashing" },
       { value: "other", label: "Other — describe in email" },
     ],
     quoteCta: "Get quote",
@@ -97,34 +97,34 @@ export const siteCopy = {
   /** Industry-standard “how we work” — sets expectations before portfolio (trust + clarity). */
   process: {
     eyebrow: "How we work",
-    title: "From first conversation to final walkthrough",
+    title: "From first call to final walkthrough",
     subtitle:
-      "Premium remodeling sites win when homeowners see a repeatable process: scope, documentation, build quality, and communication. Here’s ours.",
+      "A roof is a system: deck, underlayment, flashing, and ventilation. Here’s how we keep scope, safety, and communication clear from estimate to completion.",
     steps: [
       {
-        title: "Discovery & scope",
+        title: "Inspection & scope",
         description:
-          "We walk the space, align on goals, budget, and timeline, and document what success looks like before anything is ordered or cut.",
+          "We assess the roof deck, penetrations, and drainage, then document what needs repair versus full replacement — with photos you can reference.",
       },
       {
-        title: "Plans & engineering",
+        title: "Estimate & materials",
         description:
-          "Architectural drawings and details stay coordinated with structure, MEP, and finishes so the field crew isn’t guessing.",
+          "You get options for shingle or metal systems, underlayment ratings, and warranty tiers so the proposal matches your budget and storm exposure.",
       },
       {
-        title: "Permits & compliance",
+        title: "Permits & scheduling",
         description:
-          "Permit packages, submissions, and follow-up with the municipality — so work that starts is work that’s approved.",
+          "We coordinate municipality requirements and production dates so tear-off and dry-in happen in the right order.",
       },
       {
-        title: "Build & protection",
+        title: "Installation",
         description:
-          "Protected pathways, dust containment, and daily coordination on site — kitchen, bath, tile, drywall, and finishes built to spec.",
+          "Crews follow manufacturer specs for nailing patterns, flashing, and ventilation — with daily site respect and debris control.",
       },
       {
-        title: "Inspections & handoff",
+        title: "Final inspection & handoff",
         description:
-          "Inspection-ready work, a tight punch list, and a final walkthrough so you’re confident before we close the job.",
+          "We walk the finished roof with you, confirm clean-up, and leave warranty and care notes so you know what to expect next.",
       },
     ],
     trustLine:
@@ -133,9 +133,9 @@ export const siteCopy = {
   portfolio: {
     title: "Selected projects",
     subtitle:
-      "Kitchens, baths, tile, drywall, and interiors we’ve planned, permitted, and built.",
+      "Replacements, repairs, and re-roofs we’ve completed across South Florida.",
     row2Subtitle:
-      "More remodels, tile work, and finish details from recent jobs.",
+      "More roofing and exterior work from recent jobs.",
     reelVideoSrc: "/hero.mp4",
     reelVideoSrc2: "/hero-reversed.mp4",
     reelBridgeTitle: "On site",
@@ -143,69 +143,67 @@ export const siteCopy = {
   offers: {
     title: "Services",
     subtitle:
-      "Architectural plans, permits, and interior craft — kitchen, bath, tile, and drywall.",
+      "Residential roofing — replacement, repair, and storm-ready systems.",
     items: [
       {
-        title: "Architectural plans",
+        title: "Roof replacement",
         description:
-          "Drawings and coordination so your remodel is clear, code-aware, and ready to build — layout, details, and revisions that keep the job moving.",
-        cta: "Discuss your plans",
+          "Full tear-off and re-roof with quality underlayment, flashing, and ventilation — built to manufacturer specs and local code.",
+        cta: "Discuss replacement",
       },
       {
-        title: "Permits",
+        title: "Repairs & leaks",
         description:
-          "Permit packages, submissions, and follow-up with the municipality so approved work can start on time and inspections stay straightforward.",
-        cta: "Ask about permits",
+          "Targeted fixes for storm damage, worn valleys, flashing failures, and penetrations — with clear photos and scope before we start.",
+        cta: "Request a repair",
       },
       {
-        title: "Kitchen",
+        title: "Shingle roofing",
         description:
-          "Full kitchen remodels: layout, cabinets, counters, lighting, and finishes — built for daily use and a clean, lasting look.",
-        cta: "Plan a kitchen",
+          "Architectural and designer shingles with wind ratings suited to coastal exposure — color and warranty options explained up front.",
+        cta: "See shingle options",
       },
       {
-        title: "Bath",
+        title: "Metal roofing",
         description:
-          "Bathroom remodels from updates to full gut jobs — waterproofing, fixtures, ventilation, and finishes done right.",
-        cta: "Plan a bath",
+          "Standing seam and panel systems for durability and clean lines — ideal when you want long life and low maintenance.",
+        cta: "Ask about metal",
       },
       {
-        title: "Tile work",
+        title: "Inspections",
         description:
-          "Floors, walls, showers, backsplashes, and custom layouts with straight lines, solid prep, and grout that holds up.",
-        cta: "See tile options",
+          "Honest assessments for real estate, insurance, or peace of mind — what’s urgent, what can wait, and what to budget for.",
+        cta: "Schedule inspection",
       },
       {
-        title: "Drywall",
+        title: "Storm & insurance",
         description:
-          "Hang, tape, finish, and texture matching — plus repairs — so walls and ceilings are smooth and ready for paint.",
-        cta: "Request drywall",
+          "Documentation and coordination support after wind or hail — we help you understand scope alongside your adjuster.",
+        cta: "Storm help",
       },
     ],
   },
   about: {
     title: "About",
     body: [
-      "Plans, permits, and interior work — kitchens, baths, tile, and drywall — with clear communication from walkthrough to punch list.",
+      "Sovereign Roofing focuses on residential roofs — replacement, repair, and storm recovery — with clear communication from inspection to final walkthrough.",
     ],
     credentials: "Licensed & insured · South Florida",
-    cta: "Work with Centric",
-    portraitSrc: "/partnership-blueprint.png",
-    portraitAlt: "Blueprint scroll — architectural plans and project partnership",
+    cta: "Work with Sovereign",
     quote: "Honest schedules. Finish work you notice every day.",
   },
   contact: {
     title: "Contact",
     body:
-      "Tell us about your plans, permits, or next kitchen, bath, tile, or drywall project — we’ll follow up with next steps.",
+      "Tell us about your roof — replacement, leak, inspection, or storm claim — we’ll follow up with next steps.",
     quoteLead:
-      "Plans, permits, or remodel — we reply with next steps.",
+      "Roof project or question — we reply with next steps.",
     email: "Centricgroup.us@gmail.com",
   },
   locationPage: {
     title: "Location & service area",
     lead:
-      "Centric Group works with homeowners and property owners across South Florida — from plans and permits through kitchen, bath, tile, and drywall.",
+      "Sovereign Roofing works with homeowners across South Florida — roof replacement, repair, inspections, and storm support.",
     body: [
       "We coordinate site visits, municipal submissions, and production schedules so your project stays moving.",
       "Reach out through the contact page to discuss your address, timeline, and scope.",
@@ -218,12 +216,12 @@ export const siteCopy = {
     serviceAreasFootnote:
       "Don’t see your area listed? Contact us — we often coordinate projects across county lines for the right scope.",
     /** JSON-LD ItemList for /location */
-    schemaItemListName: "Centric Group — South Florida service areas",
+    schemaItemListName: "Sovereign Roofing — South Florida service areas",
     schemaItemListDescription:
-      "Cities and counties where Centric Group provides plans, permits, kitchen and bath remodeling, tile, and drywall.",
+      "Cities and counties where Sovereign Roofing provides residential roofing, repairs, and inspections.",
   },
   footer: {
-    rights: "Centric Group",
+    rights: "Sovereign Roofing",
     location: "Miami · South Florida",
     mapHeading: "Service area",
     mapLinkLabel: "Location page",
@@ -234,8 +232,8 @@ export const siteCopy = {
     navAriaMobile: "Mobile primary",
     footerNavAria: "Footer",
     introAria: "Introduction",
-    headerBrandHomeAria: "Centric Group home",
-    mapIframeTitle: "Map of Florida — Centric Group service area",
+    headerBrandHomeAria: "Sovereign Roofing home",
+    mapIframeTitle: "Map of Florida — Sovereign Roofing service area",
     offersEyebrow: "What we do",
     aboutEyebrow: "Who we are",
     processCta: "Start a conversation",
@@ -259,14 +257,14 @@ export const siteCopy = {
     reviewsEmptyHint: "Add reviews in",
     reviewsEmptyCode: "siteCopy.googleReviews.reviews",
     locationDetailParagraph:
-      "Centric Group provides architectural plans, permit coordination, and interior remodeling—including kitchen and bath renovations, tile installation, and drywall—across Miami-Dade, Broward, Palm Beach, and select Monroe County communities. Use the directory below to find your city or county.",
+      "Sovereign Roofing provides residential roof replacement, repairs, inspections, and storm documentation support across Miami-Dade, Broward, Palm Beach, and select Monroe County communities. Use the directory below to find your city or county.",
     /** `{count}` replaced */
     locationDirectoryIntro:
       "{count} cities and counties across South Florida—each with local context for homeowners searching remodeling contractors, permit help, and interior construction near you.",
     locationPhotoCredit:
       "Area photos are South Florida location stock (e.g. Miami Beach, Hollywood FL, Boynton Beach, Keys) from",
     locationPhotoCreditSuffix:
-      ", saved on-site; ask us for photos of completed Centric projects in your city.",
+      ", saved on-site; ask us for photos of completed Sovereign Roofing projects in your city.",
     locationCoverageMapHeading: "Coverage map",
     locationContactLine: "Contact us",
     locationContactSuffix: "with your project address.",
@@ -275,7 +273,7 @@ export const siteCopy = {
       "This page doesn’t exist. Return home or explore services and projects.",
     notFoundHome: "Home",
     notFoundContact: "Contact",
-    quoteEmailSubject: "Quote request — Centric Group",
+    quoteEmailSubject: "Quote request — Sovereign Roofing",
     quoteEmailName: "Name",
     quoteEmailEmail: "Email",
     quoteEmailPhone: "Phone",

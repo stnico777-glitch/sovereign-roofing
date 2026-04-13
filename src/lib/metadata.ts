@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { defaultDescription, defaultTitle, siteUrl } from "@/lib/site";
 
 /** Default link previews (Open Graph / Twitter). */
-export const defaultBrandImage = "/logo-centric-group.png";
+export const defaultBrandImage = "/sovereign.png";
 
 /**
  * Favicons for the tab bar / bookmarks come from the App Router file convention:
@@ -15,7 +15,7 @@ export function rootMetadata(): Metadata {
     metadataBase: new URL(siteUrl),
     title: {
       default: defaultTitle,
-      template: "%s | Centric Group",
+      template: "%s | Sovereign Roofing",
     },
     description: defaultDescription,
     openGraph: {
@@ -23,7 +23,7 @@ export function rootMetadata(): Metadata {
       description: defaultDescription,
       locale: "en_US",
       type: "website",
-      siteName: "Centric Group",
+      siteName: "Sovereign Roofing",
       images: [{ url: defaultBrandImage }],
     },
     twitter: {

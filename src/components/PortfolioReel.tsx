@@ -40,7 +40,7 @@ export function PortfolioReel() {
               <source src={src1} type="video/mp4" />
             </video>
             <div
-              className="absolute inset-0 hidden bg-gradient-to-br from-reel-chrome via-[#151f32] to-footer motion-reduce:block"
+              className="absolute inset-0 hidden bg-gradient-to-br from-reel-chrome via-[#e4e4e7] to-background motion-reduce:block"
               aria-hidden
             />
           </div>
@@ -55,7 +55,7 @@ export function PortfolioReel() {
               <source src={src2} type="video/mp4" />
             </video>
             <div
-              className="absolute inset-0 hidden bg-gradient-to-br from-[#121a2a] via-reel-chrome to-footer motion-reduce:block"
+              className="absolute inset-0 hidden bg-gradient-to-br from-[#e4e4e7] via-reel-chrome to-background motion-reduce:block"
               aria-hidden
             />
           </div>

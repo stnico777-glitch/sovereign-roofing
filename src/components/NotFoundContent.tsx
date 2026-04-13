@@ -16,7 +16,7 @@ export function NotFoundContent() {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link
           href={routes.home}
-          className="rounded-full border border-accent/40 bg-accent px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.18em] text-slate-950 uppercase transition hover:bg-accent/90"
+          className="rounded-full border border-accent/40 bg-accent px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.18em] text-white uppercase transition hover:bg-accent/90"
         >
           {copy.ui.notFoundHome}
         </Link>

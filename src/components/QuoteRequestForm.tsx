@@ -1,7 +1,6 @@
 "use client";
 
 import type { ComponentType, ReactNode } from "react";
-import Image from "next/image";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -13,6 +12,25 @@ import {
   IconUser,
 } from "@/components/icons/ThemeIcons";
 import { useLocale } from "@/context/LocaleContext";
+
+/** Nav icon (compass mark) as large faint watermark behind the form. */
+function QuoteCardWatermark() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-0 z-[1] overflow-hidden opacity-[0.16]"
+      aria-hidden
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element -- same asset as header; decorative */}
+      <img
+        src="/sovereign-nav-logo.png"
+        alt=""
+        width={512}
+        height={512}
+        className="h-full w-full origin-center scale-[2.1] object-contain object-center sm:scale-[2.35]"
+      />
+    </div>
+  );
+}
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -47,11 +65,11 @@ function FieldShell({
   const shell =
     variant === "vision"
       ? "border-border bg-background/85"
-      : "border-white/15 bg-black/35 backdrop-blur-sm";
+      : "border-border bg-surface-muted/90 backdrop-blur-sm";
   const iconWrap =
     variant === "vision"
       ? "border-accent/20 bg-pill-bg/80"
-      : "border-accent/35 bg-white/[0.06]";
+      : "border-accent/35 bg-accent/10";
   return (
     <div
       className={`flex min-h-[42px] items-center gap-2 rounded-full border pl-2 pr-1 transition focus-within:border-accent/45 focus-within:ring-1 focus-within:ring-accent/25 ${shell}`}
@@ -113,8 +131,8 @@ function QuoteLoadingOverlay({
   const reduce = useReducedMotion();
   const panel =
     variant === "vision"
-      ? "bg-pill-bg/93 backdrop-blur-md ring-1 ring-slate-900/20"
-      : "bg-[#05080f]/90 backdrop-blur-md ring-1 ring-white/10";
+      ? "bg-background/95 backdrop-blur-md ring-1 ring-border"
+      : "bg-background/95 backdrop-blur-md ring-1 ring-border";
 
   return (
     <motion.div
@@ -194,7 +212,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
             project_type: typeLabel || copy.ui.quoteEmailNotSelected,
             message: messageBody,
             replyto: email,
-            from_name: name || "Centric Group lead",
+            from_name: name || "Sovereign Roofing lead",
             botcheck: "",
           }),
         });
@@ -275,15 +293,15 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
       <div
         className={
           variant === "vision"
-            ? "mb-3 flex shrink-0 -translate-x-1 -translate-y-px items-center justify-center gap-2 border-b border-slate-900/15 pb-3 sm:-translate-x-1.5 sm:-translate-y-0.5"
-            : "mb-4 flex shrink-0 items-center justify-center gap-2.5 border-b border-white/10 pb-4"
+            ? "mb-3 flex shrink-0 -translate-x-1 -translate-y-px items-center justify-center gap-2 border-b border-border pb-3 sm:-translate-x-1.5 sm:-translate-y-0.5"
+            : "mb-4 flex shrink-0 items-center justify-center gap-2.5 border-b border-border pb-4"
         }
       >
         <span
           className={
             variant === "vision"
-              ? "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-slate-950/90 text-accent shadow-sm sm:h-10 sm:w-10"
-              : "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/45 bg-accent/10 text-accent shadow-[0_0_24px_rgba(196,168,90,0.12)]"
+              ? "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent shadow-sm sm:h-10 sm:w-10"
+              : "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/45 bg-accent/10 text-accent shadow-[0_0_24px_rgba(178,30,41,0.18)]"
           }
           aria-hidden
         >
@@ -299,7 +317,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
           <h3
             className={
               variant === "vision"
-                ? "font-sans text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 sm:text-[0.8125rem]"
+                ? "font-sans text-xs font-semibold uppercase tracking-[0.18em] text-foreground sm:text-[0.8125rem]"
                 : "font-sans text-[0.8125rem] font-semibold uppercase tracking-[0.22em] text-foreground"
             }
           >
@@ -404,7 +422,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
                     className={
                       variant === "vision"
                         ? "bg-pill-bg text-foreground"
-                        : "bg-[#0c121c] text-foreground"
+                        : "bg-background text-foreground"
                     }
                   >
                     {opt.label}
@@ -430,7 +448,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
           className={
             variant === "vision"
               ? `mt-3 font-sans text-[13px] leading-snug sm:text-sm ${submitState === "success" ? "text-emerald-800" : "text-red-700"}`
-              : `mt-3 font-sans text-[13px] leading-snug sm:text-sm ${submitState === "success" ? "text-emerald-300/95" : "text-red-300/95"}`
+              : `mt-3 font-sans text-[13px] leading-snug sm:text-sm ${submitState === "success" ? "text-emerald-700" : "text-red-600"}`
           }
         >
           <p>
@@ -443,7 +461,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
               className={
                 variant === "vision"
                   ? "mt-2 font-sans text-xs leading-snug text-red-800/90"
-                  : "mt-2 font-sans text-xs leading-snug text-red-200/85"
+                  : "mt-2 font-sans text-xs leading-snug text-red-600/90"
               }
             >
               {submitErrorDetail}
@@ -457,8 +475,8 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
         disabled={submitState === "sending"}
         className={
           variant === "vision"
-            ? "mt-3 w-full shrink-0 rounded-full bg-accent px-4 py-2.5 text-center font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-950 transition hover:bg-accent/90 enabled:cursor-pointer enabled:hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70 sm:py-3"
-            : "mt-4 w-full shrink-0 rounded-full bg-accent px-4 py-3 text-center font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-950 shadow-[0_8px_28px_rgba(196,168,90,0.25)] transition enabled:cursor-pointer enabled:hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70"
+            ? "mt-3 w-full shrink-0 rounded-full bg-accent px-4 py-2.5 text-center font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent/90 enabled:cursor-pointer enabled:hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70 sm:py-3"
+            : "mt-4 w-full shrink-0 rounded-full bg-accent px-4 py-3 text-center font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_8px_28px_rgba(178,30,41,0.35)] transition enabled:cursor-pointer enabled:hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70"
         }
       >
         {submitState === "sending" ? copy.ui.quoteSubmitting : v.quoteCta}
@@ -473,11 +491,12 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
           className="pointer-events-none absolute -inset-1 rounded-[1.125rem] bg-gradient-to-br from-accent/20 via-transparent to-accent/5 opacity-90 blur-md"
           aria-hidden
         />
-        <div className="relative overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] shadow-[0_20px_56px_rgba(0,0,0,0.45)] ring-1 ring-white/[0.06]">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-background shadow-[0_16px_48px_rgba(0,0,0,0.08)] ring-1 ring-border/60">
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_80%_at_50%_0%,rgba(196,168,90,0.07),transparent_55%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_80%_at_50%_0%,rgba(178,30,41,0.1),transparent_55%)]"
             aria-hidden
           />
+          <QuoteCardWatermark />
           {formBody}
         </div>
       </div>
@@ -490,18 +509,8 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
         className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent/15 via-transparent to-transparent opacity-80 blur-sm"
         aria-hidden
       />
-      <div className="relative flex w-full flex-col overflow-hidden rounded-2xl border border-border/70 shadow-[0_16px_48px_rgba(0,0,0,0.32)]">
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src="/quote-tile.png"
-            alt=""
-            fill
-            unoptimized
-            className="object-cover object-center scale-[1.55]"
-            sizes="(max-width: 768px) 100vw, 448px"
-            priority={false}
-          />
-        </div>
+      <div className="relative flex w-full flex-col overflow-hidden rounded-2xl border border-border/70 bg-background shadow-[0_16px_48px_rgba(0,0,0,0.1)]">
+        <QuoteCardWatermark />
         {formBody}
       </div>
     </div>

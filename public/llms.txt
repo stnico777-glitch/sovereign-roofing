@@ -1,24 +1,5 @@
-# Centric Group
+# Sovereign Roofing
 
-> Architectural plans, permits, kitchen and bath remodels, tile, and drywall — South Florida.
+Site: set NEXT_PUBLIC_SITE_URL in production.
 
-## Summary
-Centric Group is a general contractor focused on residential remodeling: drawings and permits through finished interiors.
-
-## Process
-Homepage includes a “How we work” section: discovery → plans → permits → build/protection → inspections & handoff.
-
-## Primary pages
-- / — Home
-- /projects — Project gallery
-- /services — Services (plans, permits, kitchen, bath, tile, drywall)
-- /about — About
-- /reviews — Client reviews
-- /contact — Contact
-- /service-areas — Service areas (30+ South Florida cities & counties; /location is the same page)
-
-## Contact
-Use /contact for project inquiries. Phone and email appear in the site footer.
-
-## Language
-English (US).
+Sovereign Roofing is a residential roofing contractor in South Florida: replacement, repair, inspections, and storm-related documentation support.

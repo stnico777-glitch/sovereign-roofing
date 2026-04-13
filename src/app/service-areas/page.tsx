@@ -6,7 +6,7 @@ import { routes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
   "Service areas — South Florida cities & counties",
-  "Centric Group serves 30+ South Florida cities and counties with architectural plans, building permits, kitchen and bath remodeling, tile, drywall, and interior construction. Miami-Dade, Broward, Palm Beach, and the Keys.",
+  "Sovereign Roofing serves 30+ South Florida cities and counties with residential roof replacement, repairs, inspections, and storm documentation support. Miami-Dade, Broward, Palm Beach, and the Keys.",
   routes.location,
 );
 

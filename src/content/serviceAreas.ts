@@ -20,10 +20,10 @@ export const serviceAreas: ServiceArea[] = [
     name: "Miami",
     region: "Miami-Dade County",
     description:
-      "From Brickell to Wynwood, Centric Group supports Miami homeowners with architectural plans, permit coordination, and interior remodeling. Kitchen and bath renovations, tile, drywall, and finish carpentry—with schedules you can plan around.",
+      "From Brickell to Wynwood, Sovereign Roofing supports Miami homeowners with roof replacement, repairs, and inspections — shingle and metal systems, flashing, and storm documentation when you need it.",
     imageSrc: "/service-areas/miami.jpg",
     imageAlt:
-      "Miami skyline by the water on a sunny day — Centric Group remodeling and permits in Miami, Florida",
+      "Miami skyline by the water on a sunny day — Sovereign Roofing residential roofing in Miami, Florida",
   },
   {
     id: "miami-beach",
@@ -80,7 +80,7 @@ export const serviceAreas: ServiceArea[] = [
     name: "Doral",
     region: "Miami-Dade County",
     description:
-      "Fast-growing Doral calls for dependable contractors. Centric Group provides residential remodeling, permit support, and interior trades from demo to paint-ready drywall—ideal for growing families and investment properties.",
+      "Fast-growing Doral calls for dependable roofers. Sovereign Roofing provides residential re-roofs, leak repairs, and inspections—ideal for growing families and investment properties.",
     imageSrc: "/service-areas/doral.jpg",
     imageAlt:
       "Doral, Florida — DoubleTree by Hilton Miami Doral and surrounding development",
@@ -140,7 +140,7 @@ export const serviceAreas: ServiceArea[] = [
     name: "Hollywood",
     region: "Broward County",
     description:
-      "Hollywood homeowners choose Centric for whole-home updates and room-by-room remodels. We file permits, coordinate inspections, and execute tile, drywall, and trim work to a South Florida professional standard.",
+      "Hollywood homeowners choose Sovereign Roofing for full replacements and targeted repairs. We coordinate permits when required, walk inspections with you, and install to manufacturer and code standards.",
     imageSrc: "/service-areas/hollywood.jpg",
     imageAlt:
       "Hollywood Beach, Hollywood, Florida — palms and Atlantic shoreline",
@@ -180,7 +180,7 @@ export const serviceAreas: ServiceArea[] = [
     name: "Weston",
     region: "Broward County",
     description:
-      "Weston’s planned communities expect polished results. Centric Group delivers architectural coordination, permits, and interior remodeling—from gourmet kitchens to spa-style baths and whole-home refresh.",
+      "Weston’s planned communities expect polished results. Sovereign Roofing delivers coordinated roof systems—from architectural shingles to metal—with clean job sites and clear communication.",
     imageSrc: "/service-areas/weston.jpg",
     imageAlt:
       "Bonaventure Golf Club entrance — Weston, Broward County, Florida",
@@ -260,7 +260,7 @@ export const serviceAreas: ServiceArea[] = [
     name: "Boynton Beach",
     region: "Palm Beach County",
     description:
-      "Boynton Beach families and retirees rely on Centric for accessible remodels, open kitchens, bath upgrades, and durable tile and drywall in Florida’s coastal climate.",
+      "Boynton Beach families and retirees rely on Sovereign Roofing for durable roofs, wind-rated materials, and honest assessments in Florida’s coastal climate.",
     imageSrc: "/service-areas/boynton-beach.jpg",
     imageAlt:
       "Boynton Beach Inlet — Boynton Beach, Palm Beach County, Florida",

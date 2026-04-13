@@ -5,7 +5,7 @@ import { useLocale } from "@/context/LocaleContext";
 export function ReviewCard() {
   const { copy } = useLocale();
   return (
-    <div className="rounded-2xl border border-white/12 bg-background/85 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-md md:p-6">
+    <div className="rounded-2xl border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)] backdrop-blur-md md:p-6">
       <p className="text-display text-4xl font-bold text-foreground md:text-5xl">
         {copy.review.stat}
       </p>

@@ -239,7 +239,7 @@ export function GoogleReviewsSection() {
               href={writeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md border border-accent/45 bg-accent px-5 py-2.5 font-sans text-sm font-semibold text-slate-950 shadow-sm transition hover:border-accent/60 hover:bg-accent/90"
+              className="inline-flex items-center justify-center rounded-md border border-accent/45 bg-accent px-5 py-2.5 font-sans text-sm font-semibold text-white shadow-sm transition hover:border-accent/60 hover:bg-accent/90"
             >
               {gr.writeReviewCta}
             </a>
@@ -339,11 +339,12 @@ export function GoogleReviewsSection() {
           <Reveal from="up">
             <div className="mb-6 flex justify-center">
               <Image
-                src="/process-hardhat.png"
+                src="/process-hardhat.png?v=2"
                 alt=""
-                width={1024}
-                height={571}
-                className="h-[4.5rem] w-auto max-w-[11rem] object-contain opacity-[0.92] mix-blend-lighten sm:h-[5.25rem] sm:max-w-[12.5rem]"
+                width={1152}
+                height={928}
+                unoptimized
+                className="h-[4.5rem] w-auto max-w-[11rem] object-contain opacity-[0.92] sm:h-[5.25rem] sm:max-w-[12.5rem]"
                 sizes="(max-width: 640px) 11rem, 12.5rem"
               />
             </div>

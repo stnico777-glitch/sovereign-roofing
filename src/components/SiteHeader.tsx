@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogoImage } from "@/components/BrandLogoImage";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useLocale } from "@/context/LocaleContext";
@@ -44,16 +44,16 @@ export function SiteHeader() {
   const fg = heroBarClear ? "text-hero-fg" : "";
 
   const navInactive = heroBarClear
-    ? "text-muted-light/95 hover:text-muted-light"
-    : "text-foreground/90 hover:text-foreground";
+    ? "text-white/90 hover:text-white"
+    : "text-foreground/80 hover:text-foreground";
 
   const brandClass = heroBarClear
-    ? "text-slate-200 text-hero-fg"
+    ? "text-white text-hero-fg"
     : "text-foreground";
 
   const headerShell = heroBarClear
     ? "border-b border-transparent bg-transparent"
-    : "border-b border-slate-700/70 bg-slate-800/95 shadow-sm backdrop-blur-md supports-[backdrop-filter]:bg-slate-800/90";
+    : "border-b border-border bg-background/95 shadow-sm backdrop-blur-md supports-[backdrop-filter]:bg-background/90";
 
   return (
     <>
@@ -64,24 +64,25 @@ export function SiteHeader() {
           <div className="flex items-center justify-between gap-4 md:block">
             <Link
               href={routes.home}
-              className={`text-display inline-flex items-center gap-3 text-[1.125rem] font-semibold leading-tight transition-opacity hover:opacity-90 md:text-[1.3125rem] ${brandClass}`}
+              className={`inline-flex items-center gap-2 transition-opacity hover:opacity-90 ${brandClass}`}
               aria-label={copy.ui.headerBrandHomeAria}
             >
-              <Image
-                src="/brand-nav-compass.png"
+              <BrandLogoImage
+                src="/sovereign-nav-logo.png"
                 alt=""
                 width={512}
                 height={512}
-                className="h-9 w-auto shrink-0 object-contain grayscale brightness-[4.25] contrast-[0.6] opacity-100 transition-[filter,opacity] duration-300 md:h-10"
+                className="h-16 w-auto max-w-[min(100%,30rem)] shrink-0 object-contain object-left sm:h-[4.25rem] md:h-[5.25rem]"
                 priority
+                appearance={heroBarClear ? "over-video" : "on-light"}
               />
-              <span className="uppercase">{copy.headerBrand}</span>
+              <span className="sr-only">{copy.headerBrand}</span>
             </Link>
             <button
               type="button"
               className={`flex h-10 w-10 items-center justify-center rounded-full border text-xl font-light transition md:hidden ${
                 heroBarClear
-                  ? "border-muted-light/35 text-muted-light hover:border-muted-light/55"
+                  ? "border-white/35 text-white hover:border-white/55"
                   : "border-border text-foreground hover:border-accent/35"
               } ${fg}`}
               aria-expanded={menuOpen}
@@ -117,7 +118,7 @@ export function SiteHeader() {
             <div className="flex items-center gap-4 md:gap-5">
               <div
                 className={`flex items-center gap-1.5 font-sans text-xs font-medium tracking-[0.2em] ${
-                  heroBarClear ? "text-muted-light/95" : "text-muted"
+                  heroBarClear ? "text-white/90" : "text-muted"
                 } ${fg}`}
               >
                 <button
@@ -126,8 +127,8 @@ export function SiteHeader() {
                   className={`transition hover:opacity-100 ${
                     heroBarClear
                       ? locale === "en"
-                        ? "text-muted-light"
-                        : "text-muted-light/50"
+                        ? "text-white"
+                        : "text-white/45"
                       : locale === "en"
                         ? "text-foreground"
                         : "text-muted"
@@ -137,7 +138,7 @@ export function SiteHeader() {
                 </button>
                 <span
                   className={
-                    heroBarClear ? "text-muted-light/40" : "text-border"
+                    heroBarClear ? "text-white/35" : "text-border"
                   }
                 >
                   /
@@ -148,8 +149,8 @@ export function SiteHeader() {
                   className={`transition hover:opacity-100 ${
                     heroBarClear
                       ? locale === "es"
-                        ? "text-muted-light"
-                        : "text-muted-light/50"
+                        ? "text-white"
+                        : "text-white/45"
                       : locale === "es"
                         ? "text-foreground"
                         : "text-muted"
@@ -162,11 +163,11 @@ export function SiteHeader() {
                 href={`tel:${copy.phoneTel}`}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold leading-none tracking-wide shadow-sm backdrop-blur-md transition ${
                   heroBarClear
-                    ? "border-muted-light/25 bg-black/10 text-muted-light shadow-[0_2px_24px_rgba(0,0,0,0.35)] hover:border-muted-light/40 hover:bg-black/18"
-                    : "border-border/70 bg-slate-900/40 text-foreground hover:border-accent/30 hover:bg-slate-900/55"
+                    ? "border-white/35 bg-black/25 text-white shadow-[0_2px_24px_rgba(0,0,0,0.35)] hover:border-white/50 hover:bg-black/35"
+                    : "border-border bg-background text-foreground hover:border-accent/40 hover:bg-surface-muted/80"
                 }`}
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-slate-950">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white">
                   <PhoneIcon className="h-4 w-4" />
                 </span>
                 <span className="pr-0.5">{copy.phoneDisplay}</span>
@@ -178,7 +179,7 @@ export function SiteHeader() {
 
       <div
         id="mobile-nav"
-        className={`fixed inset-0 z-40 flex flex-col bg-black/95 px-[var(--container-pad)] pt-24 transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-background px-[var(--container-pad)] pt-24 transition-opacity duration-300 md:hidden ${
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!menuOpen}
@@ -191,7 +192,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={`text-display text-2xl font-semibold transition hover:opacity-80 ${
-                  active ? "text-accent" : "text-muted-light"
+                  active ? "text-accent" : "text-foreground/85"
                 }`}
                 aria-current={active ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
@@ -201,19 +202,19 @@ export function SiteHeader() {
             );
           })}
         </nav>
-        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8">
-          <div className="flex gap-4 font-sans text-sm tracking-[0.2em] text-muted-light/85">
+        <div className="mt-10 flex flex-col gap-4 border-t border-border pt-8">
+          <div className="flex gap-4 font-sans text-sm tracking-[0.2em] text-muted">
             <button
               type="button"
-              className={locale === "en" ? "text-muted-light" : ""}
+              className={locale === "en" ? "text-foreground" : ""}
               onClick={() => setLocale("en")}
             >
               EN
             </button>
-            <span className="text-muted-light/40">/</span>
+            <span className="text-border">/</span>
             <button
               type="button"
-              className={locale === "es" ? "text-muted-light" : ""}
+              className={locale === "es" ? "text-foreground" : ""}
               onClick={() => setLocale("es")}
             >
               ES

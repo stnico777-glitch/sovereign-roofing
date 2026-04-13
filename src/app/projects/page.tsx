@@ -8,7 +8,7 @@ import { routes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
   "Projects — gallery & on-site work",
-  "See kitchens, baths, tile, drywall, and interiors from Centric Group — planned, permitted, and built across South Florida.",
+  "See roof projects from Sovereign Roofing — replacements, repairs, and re-roofs across South Florida.",
   routes.projects,
 );
 

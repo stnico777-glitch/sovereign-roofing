@@ -6,7 +6,7 @@ import { routes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
   "Reviews — what clients say",
-  "Read verified-style testimonials from Centric Group clients — plans, permits, kitchens, baths, tile, and drywall.",
+  "Read verified-style testimonials from Sovereign Roofing clients — roof replacement, repairs, and storm recovery.",
   routes.reviews,
 );
 

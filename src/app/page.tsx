@@ -13,7 +13,7 @@ import { defaultTitle, siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: defaultTitle,
   description:
-    "Architectural plans, permits, kitchen and bath remodels, tile, and drywall — Centric Group, South Florida.",
+    "Roof replacement, repairs, and inspections — Sovereign Roofing, South Florida.",
   alternates: { canonical: siteUrl },
 };
 

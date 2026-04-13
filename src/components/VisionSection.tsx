@@ -18,7 +18,7 @@ export function VisionSection() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_80%_0%,rgba(196,168,90,0.06),transparent_45%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_80%_0%,rgba(178,30,41,0.08),transparent_45%)]"
         aria-hidden
       />
 

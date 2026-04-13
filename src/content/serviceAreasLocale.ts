@@ -15,7 +15,7 @@ const regionEs: Record<string, string> = {
 /** Spanish copy for each service area (visible descriptions). */
 const descriptionEs: Record<string, string> = {
   miami:
-    "De Brickell a Wynwood, Centric Group apoya a propietarios en Miami con planos arquitectónicos, permisos y remodelación interior. Cocinas, baños, azulejo, yeso y carpintería de acabado, con cronogramas claros.",
+    "De Brickell a Wynwood, Sovereign Roofing apoya a propietarios en Miami con reemplazo y reparación de techos, inspecciones y sistemas de teja o metal, con cronogramas claros.",
   "miami-beach":
     "Apartamentos y casas en Miami Beach se benefician de planos alineados al código, documentación para la administración y acabados de cocina, baño y azulejo. Coordinamos inspecciones y listas de pendientes en la costa del Sur de Florida.",
   "coral-gables":
@@ -27,7 +27,7 @@ const descriptionEs: Record<string, string> = {
   "sunny-isles-beach":
     "Torres frente al mar y condominios de lujo: planos, permisos y acabado de cocinas, baños y salas — azulejo, yeso y detalle para el horizonte de Sunny Isles.",
   doral:
-    "El crecimiento de Doral exige contratistas confiables. Centric Group ofrece remodelación residencial, apoyo con permisos y oficios de demolición a yeso listo para pintar, ideal para familias e inversiones.",
+    "El crecimiento de Doral exige techadores confiables. Sovereign Roofing ofrece techos residenciales, reparaciones de goteras e inspecciones, ideal para familias e inversiones.",
   "north-miami":
     "Vivienda asequible y de gama media en North Miami recibe la misma atención en planos, permisos y oficio: cocinas y baños, pisos y azulejo, y yeso del que no tendrás que esconder los muebles.",
   hialeah:
@@ -39,7 +39,7 @@ const descriptionEs: Record<string, string> = {
   "fort-lauderdale":
     "Casas frente al agua y condominios urbanos: planos, permisos, cocinas y baños, azulejo y yeso, con equipos que respetan tu hogar y tu agenda.",
   hollywood:
-    "Propietarios en Hollywood eligen a Centric para renovaciones completas o por habitación. Tramitamos permisos, coordinamos inspecciones y ejecutamos azulejo, yeso y carpintería a nivel profesional.",
+    "Propietarios en Hollywood eligen a Sovereign Roofing para reemplazos completos o reparaciones puntuales. Tramitamos permisos cuando aplica, coordinamos inspecciones y ejecutamos según norma del fabricante.",
   "pompano-beach":
     "Propiedades costeras e interiores en Pompano Beach: planos y permisos para remodelaciones más obra interior. Cocinas, baños, distribución de azulejo y yeso, pensados para humedad y salitre de Florida.",
   plantation:
@@ -86,7 +86,7 @@ const descriptionEs: Record<string, string> = {
 
 const imageAltEs: Record<string, string> = {
   miami:
-    "Perfil urbano de Miami junto al agua en día soleado — remodelación y permisos Centric en Miami, Florida",
+    "Perfil urbano de Miami junto al agua en día soleado — techado residencial Sovereign Roofing en Miami, Florida",
   "miami-beach":
     "Ocean Drive, Miami Beach, Florida — calle con palmeras y distrito Art Decó",
   "coral-gables":

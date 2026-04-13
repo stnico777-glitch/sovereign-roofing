@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogoImage } from "@/components/BrandLogoImage";
 import { Reveal } from "@/components/motion/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 import { routes } from "@/lib/site";
@@ -20,15 +20,14 @@ export function AboutSection() {
             className="flex min-w-0 w-full max-w-[28rem] shrink-0 items-center justify-center self-center sm:max-w-[30rem] lg:max-w-[min(100%,440px)] lg:-translate-x-2 lg:justify-start lg:self-center xl:max-w-[460px] xl:-translate-x-3"
             from="left"
           >
-            <Image
-              src={copy.about.portraitSrc}
-              alt={copy.about.portraitAlt}
-              width={1024}
-              height={571}
-              unoptimized
-              className="h-auto w-full object-contain"
-              sizes="(max-width:1023px) 90vw, 460px"
+            <BrandLogoImage
+              src="/sovereign-nav-logo.png"
+              alt="Sovereign Roofing"
+              width={512}
+              height={512}
+              className="h-auto w-full max-w-[min(100%,16rem)] object-contain sm:max-w-[18rem] md:max-w-[20rem]"
               priority
+              appearance="on-light"
             />
           </Reveal>
 
@@ -55,7 +54,7 @@ export function AboutSection() {
             </p>
             <Link
               href={routes.contact}
-              className="mt-6 inline-flex rounded-full border border-accent/40 bg-accent px-8 py-3 font-sans text-xs font-semibold tracking-[0.2em] text-slate-950 uppercase transition hover:bg-accent/90 hover:ring-1 hover:ring-accent/50 md:mt-7"
+              className="mt-6 inline-flex rounded-full border border-accent/40 bg-accent px-8 py-3 font-sans text-xs font-semibold tracking-[0.2em] text-white uppercase transition hover:bg-accent/90 hover:ring-1 hover:ring-accent/50 md:mt-7"
             >
               {copy.about.cta}
             </Link>

@@ -52,16 +52,16 @@ export function OffersSection() {
                     alt=""
                     fill
                     unoptimized
-                    className="object-contain object-center transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md"
+                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md sm:scale-[1.32]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={false}
                   />
                 </div>
-                <div className="pointer-events-none absolute inset-x-[6%] bottom-[9%] top-[33%] flex flex-col items-center justify-center gap-2 px-2 text-center transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:gap-2.5 sm:px-3">
-                  <span className="font-mono text-xs font-semibold tabular-nums tracking-[0.26em] text-accent drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] sm:text-sm">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="text-display max-w-[96%] text-xl font-semibold leading-[1.15] text-foreground drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] sm:text-2xl sm:leading-tight md:text-[1.65rem]">
+                <span className="pointer-events-none absolute left-1/2 top-[14%] z-[1] -translate-x-1/2 font-mono text-xs font-semibold tabular-nums tracking-[0.26em] text-accent transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:top-[15%] sm:text-sm">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pointer-events-none absolute inset-x-[6%] bottom-[9%] top-[33%] flex flex-col items-center justify-center px-2 text-center transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:px-3">
+                  <h3 className="max-w-[96%] font-sans text-base font-semibold leading-snug tracking-tight text-white sm:text-lg md:text-xl">
                     {offer.title}
                   </h3>
                 </div>
@@ -101,17 +101,17 @@ export function OffersSection() {
                     alt=""
                     fill
                     unoptimized
-                    className="object-contain object-center transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md"
+                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md sm:scale-[1.32]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={false}
                   />
                 </div>
 
-                <div className="pointer-events-none absolute inset-x-[6%] bottom-[9%] top-[33%] flex flex-col items-center justify-center gap-2 px-2 text-center transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:gap-2.5 sm:px-3">
-                  <span className="font-mono text-xs font-semibold tabular-nums tracking-[0.26em] text-accent drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] sm:text-sm">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="text-display max-w-[96%] text-xl font-semibold leading-[1.15] text-foreground drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] sm:text-2xl sm:leading-tight md:text-[1.65rem]">
+                <span className="pointer-events-none absolute left-1/2 top-[14%] z-[1] -translate-x-1/2 font-mono text-xs font-semibold tabular-nums tracking-[0.26em] text-accent transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:top-[15%] sm:text-sm">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pointer-events-none absolute inset-x-[6%] bottom-[9%] top-[33%] flex flex-col items-center justify-center px-2 text-center transition duration-500 group-hover:opacity-0 group-focus-within:opacity-0 sm:px-3">
+                  <h3 className="max-w-[96%] font-sans text-base font-semibold leading-snug tracking-tight text-white sm:text-lg md:text-xl">
                     {offer.title}
                   </h3>
                 </div>

@@ -6,7 +6,7 @@ import { routes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
   "Services — plans, permits, kitchen, bath, tile, drywall",
-  "Architectural plans, permits, kitchen and bath remodels, tile installation, and drywall — Centric Group’s full service offering.",
+  "Roof replacement, repairs, inspections, metal and shingle systems — Sovereign Roofing’s full service offering.",
   routes.services,
 );
 
