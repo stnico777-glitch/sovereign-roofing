@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/AboutSection";
-import { FloridaNumberOneSection } from "@/components/FloridaNumberOneSection";
 import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { Hero } from "@/components/Hero";
+import { FloridaNumberOneSection } from "@/components/FloridaNumberOneSection";
 import { OffersSection } from "@/components/OffersSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PortfolioReel } from "@/components/PortfolioReel";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { PortfolioSectionRow2 } from "@/components/PortfolioSectionRow2";
+import { TrustRatingsBanner } from "@/components/TrustRatingsBanner";
 import { VisionSection } from "@/components/VisionSection";
 import { defaultTitle, siteUrl } from "@/lib/site";
 
@@ -22,13 +23,14 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FloridaNumberOneSection />
+      <TrustRatingsBanner />
       <VisionSection />
       <ProcessSection />
       <PortfolioSection />
       <PortfolioReel />
       <PortfolioSectionRow2 />
       <OffersSection />
+      <FloridaNumberOneSection />
       <AboutSection />
       <GoogleReviewsSection />
     </>

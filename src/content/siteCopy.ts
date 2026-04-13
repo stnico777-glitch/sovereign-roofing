@@ -63,33 +63,29 @@ export const siteCopy = {
     ctaPrimary: "VIEW PROJECTS",
     ctaSecondary: "REQUEST A BID",
   },
-  /** Full-width block below hero — big “#1” headline, quote CTA, PNG category tiles (see keysconcrete-style layout). */
-  numberOne: {
-    eyebrow: "Built for South Florida",
-    headlineLead: "#1",
-    headlineRest: "ROOFING COMPANY IN FLORIDA",
-    subhead: "WE SERVE MIAMI–DADE, BROWARD & PALM BEACH",
-    cta: "GET A QUOTE",
-    tiles: [
+  /** keysconcrete `ScrollingBanner` — live kc-marquee trust strip below hero */
+  trustBanner: {
+    title: "Top rated across South Florida",
+    items: [
       {
-        label: "ROOF REPLACEMENT",
-        imageSrc: "/services-envelope.png",
-        href: routes.contact,
+        label: "Google",
+        sublabel: "5/5 • 200+ reviews",
+        logoSrc: "/brands/google.png",
       },
       {
-        label: "REPAIRS & LEAKS",
-        imageSrc: "/process-hardhat.png",
-        href: routes.contact,
+        label: "Yelp",
+        sublabel: "5/5 • 50+ reviews",
+        logoSrc: "/brands/yelp.png",
       },
       {
-        label: "SHINGLE & METAL",
-        imageSrc: "/sovereign.png",
-        href: routes.services,
+        label: "Facebook",
+        sublabel: "5/5 • 50+ reviews",
+        logoSrc: "/brands/facebook-circle.png",
       },
       {
-        label: "INSPECTIONS",
-        imageSrc: "/sovereign-nav-logo.png",
-        href: routes.contact,
+        label: "BBB",
+        sublabel: "A+ rating",
+        logoSrc: "/brands/bbb.png",
       },
     ],
   },
@@ -213,6 +209,22 @@ export const siteCopy = {
       },
     ],
   },
+  /** Keys-style trust strip: headline, supplier row, gradient quote CTA, supporting copy */
+  floridaNumberOne: {
+    headlineLead: "SOUTH FLORIDA'S #1 CHOICE",
+    headlineAccent: "FOR ROOFING",
+    body:
+      "At Sovereign Roofing, we support both commercial and residential projects with dependable scheduling and consistent crews. No job is too big or too small — tell us what you're protecting and we'll help match the right system and timeline.",
+    cta: "BOOK A FREE QUOTE",
+    partners: [
+      { src: "/brands/home-depot.png", alt: "The Home Depot" },
+      { src: "/brands/sherwin-williams.png", alt: "Sherwin-Williams" },
+      { src: "/brands/behr.png", alt: "BEHR" },
+      { src: "/brands/floor-decor.png", alt: "Floor & Decor" },
+      { src: "/brands/wayfair.png", alt: "Wayfair" },
+      { src: "/brands/ace.png", alt: "Ace Hardware" },
+    ],
+  },
   about: {
     title: "About",
     body: [
@@ -262,7 +274,6 @@ export const siteCopy = {
     navAriaMobile: "Mobile primary",
     footerNavAria: "Footer",
     introAria: "Introduction",
-    numberOneAria: "Florida's top roofing choice",
     headerBrandHomeAria: "Sovereign Roofing home",
     mapIframeTitle: "Map of Florida — Sovereign Roofing service area",
     offersEyebrow: "What we do",
@@ -280,6 +291,9 @@ export const siteCopy = {
     portfolioRow2Region: "More projects carousel",
     portfolioRow2Prev: "Scroll projects row left",
     portfolioRow2Next: "Scroll projects row right",
+    floridaNumberOneAria: "Why homeowners choose Sovereign Roofing",
+    partnerBrandsCarouselRegion: "Partner brands",
+    trustBannerAria: "Ratings on review platforms",
     /** `{count}` is replaced with the number of service areas */
     serviceAreasPreviewBlurb:
       "Miami and all of South Florida — {count} cities and counties. A sample below; see the full directory for every area we cover.",

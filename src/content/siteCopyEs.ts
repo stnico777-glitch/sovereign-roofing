@@ -66,32 +66,28 @@ export const siteCopyEs: SiteCopy = {
     ctaPrimary: "VER PROYECTOS",
     ctaSecondary: "SOLICITAR PRESUPUESTO",
   },
-  numberOne: {
-    eyebrow: "Hecho para el Sur de Florida",
-    headlineLead: "#1",
-    headlineRest: "EMPRESA DE TECHADO EN FLORIDA",
-    subhead: "ATENDEMOS MIAMI-DADE, BROWARD Y PALM BEACH",
-    cta: "SOLICITAR PRESUPUESTO",
-    tiles: [
+  trustBanner: {
+    title: "Los más valorados en el Sur de Florida",
+    items: [
       {
-        label: "REEMPLAZO DE TECHO",
-        imageSrc: "/services-envelope.png",
-        href: routes.contact,
+        label: "Google",
+        sublabel: "5/5 • Más de 200 reseñas",
+        logoSrc: "/brands/google.png",
       },
       {
-        label: "REPARACIONES Y GOTERAS",
-        imageSrc: "/process-hardhat.png",
-        href: routes.contact,
+        label: "Yelp",
+        sublabel: "5/5 • Más de 50 reseñas",
+        logoSrc: "/brands/yelp.png",
       },
       {
-        label: "TEJA Y METAL",
-        imageSrc: "/sovereign.png",
-        href: routes.services,
+        label: "Facebook",
+        sublabel: "5/5 • Más de 50 reseñas",
+        logoSrc: "/brands/facebook-circle.png",
       },
       {
-        label: "INSPECCIONES",
-        imageSrc: "/sovereign-nav-logo.png",
-        href: routes.contact,
+        label: "BBB",
+        sublabel: "Calificación A+",
+        logoSrc: "/brands/bbb.png",
       },
     ],
   },
@@ -213,6 +209,21 @@ export const siteCopyEs: SiteCopy = {
       },
     ],
   },
+  floridaNumberOne: {
+    headlineLead: "LA OPCIÓN #1 DEL SUR DE FLORIDA",
+    headlineAccent: "PARA TECHADO",
+    body:
+      "En Sovereign Roofing apoyamos proyectos comerciales y residenciales con cronogramas confiables y cuadrillas constantes. Ningún trabajo es demasiado grande o pequeño: cuéntanos qué proteges y te ayudamos a elegir el sistema y el calendario adecuados.",
+    cta: "RESERVA UNA COTIZACIÓN GRATIS",
+    partners: [
+      { src: "/brands/home-depot.png", alt: "The Home Depot" },
+      { src: "/brands/sherwin-williams.png", alt: "Sherwin-Williams" },
+      { src: "/brands/behr.png", alt: "BEHR" },
+      { src: "/brands/floor-decor.png", alt: "Floor & Decor" },
+      { src: "/brands/wayfair.png", alt: "Wayfair" },
+      { src: "/brands/ace.png", alt: "Ace Hardware" },
+    ],
+  },
   about: {
     title: "Nosotros",
     body: [
@@ -259,7 +270,6 @@ export const siteCopyEs: SiteCopy = {
     navAriaMobile: "Principal (móvil)",
     footerNavAria: "Pie de página",
     introAria: "Introducción",
-    numberOneAria: "La opción líder en techado en Florida",
     headerBrandHomeAria: "Inicio de Sovereign Roofing",
     mapIframeTitle: "Mapa de Florida — zona de servicio de Sovereign Roofing",
     offersEyebrow: "Lo que hacemos",
@@ -277,6 +287,9 @@ export const siteCopyEs: SiteCopy = {
     portfolioRow2Region: "Carrusel de más proyectos",
     portfolioRow2Prev: "Desplazar fila de proyectos a la izquierda",
     portfolioRow2Next: "Desplazar fila de proyectos a la derecha",
+    floridaNumberOneAria: "Por qué los propietarios eligen Sovereign Roofing",
+    partnerBrandsCarouselRegion: "Marcas asociadas",
+    trustBannerAria: "Calificaciones en plataformas de reseñas",
     serviceAreasPreviewBlurb:
       "Miami y todo el Sur de Florida — {count} ciudades y condados. Una muestra abajo; consulta el directorio completo de cada zona que cubrimos.",
     serviceAreasCoverageSuffix: "para el mapa de cobertura y más detalle.",
