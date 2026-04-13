@@ -66,6 +66,35 @@ export const siteCopyEs: SiteCopy = {
     ctaPrimary: "VER PROYECTOS",
     ctaSecondary: "SOLICITAR PRESUPUESTO",
   },
+  numberOne: {
+    eyebrow: "Hecho para el Sur de Florida",
+    headlineLead: "#1",
+    headlineRest: "EMPRESA DE TECHADO EN FLORIDA",
+    subhead: "ATENDEMOS MIAMI-DADE, BROWARD Y PALM BEACH",
+    cta: "SOLICITAR PRESUPUESTO",
+    tiles: [
+      {
+        label: "REEMPLAZO DE TECHO",
+        imageSrc: "/services-envelope.png",
+        href: routes.contact,
+      },
+      {
+        label: "REPARACIONES Y GOTERAS",
+        imageSrc: "/process-hardhat.png",
+        href: routes.contact,
+      },
+      {
+        label: "TEJA Y METAL",
+        imageSrc: "/sovereign.png",
+        href: routes.services,
+      },
+      {
+        label: "INSPECCIONES",
+        imageSrc: "/sovereign-nav-logo.png",
+        href: routes.contact,
+      },
+    ],
+  },
   review: {
     stat: "+150",
     body: "renovaciones e interiores completados con propietarios que vuelven para la siguiente habitación.",
@@ -230,6 +259,7 @@ export const siteCopyEs: SiteCopy = {
     navAriaMobile: "Principal (móvil)",
     footerNavAria: "Pie de página",
     introAria: "Introducción",
+    numberOneAria: "La opción líder en techado en Florida",
     headerBrandHomeAria: "Inicio de Sovereign Roofing",
     mapIframeTitle: "Mapa de Florida — zona de servicio de Sovereign Roofing",
     offersEyebrow: "Lo que hacemos",

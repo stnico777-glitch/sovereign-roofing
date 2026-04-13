@@ -63,6 +63,36 @@ export const siteCopy = {
     ctaPrimary: "VIEW PROJECTS",
     ctaSecondary: "REQUEST A BID",
   },
+  /** Full-width block below hero — big “#1” headline, quote CTA, PNG category tiles (see keysconcrete-style layout). */
+  numberOne: {
+    eyebrow: "Built for South Florida",
+    headlineLead: "#1",
+    headlineRest: "ROOFING COMPANY IN FLORIDA",
+    subhead: "WE SERVE MIAMI–DADE, BROWARD & PALM BEACH",
+    cta: "GET A QUOTE",
+    tiles: [
+      {
+        label: "ROOF REPLACEMENT",
+        imageSrc: "/services-envelope.png",
+        href: routes.contact,
+      },
+      {
+        label: "REPAIRS & LEAKS",
+        imageSrc: "/process-hardhat.png",
+        href: routes.contact,
+      },
+      {
+        label: "SHINGLE & METAL",
+        imageSrc: "/sovereign.png",
+        href: routes.services,
+      },
+      {
+        label: "INSPECTIONS",
+        imageSrc: "/sovereign-nav-logo.png",
+        href: routes.contact,
+      },
+    ],
+  },
   review: {
     stat: "+150",
     body: "renovations and interiors completed with owners who come back for the next room.",
@@ -232,6 +262,7 @@ export const siteCopy = {
     navAriaMobile: "Mobile primary",
     footerNavAria: "Footer",
     introAria: "Introduction",
+    numberOneAria: "Florida's top roofing choice",
     headerBrandHomeAria: "Sovereign Roofing home",
     mapIframeTitle: "Map of Florida — Sovereign Roofing service area",
     offersEyebrow: "What we do",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/AboutSection";
+import { FloridaNumberOneSection } from "@/components/FloridaNumberOneSection";
 import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { Hero } from "@/components/Hero";
 import { OffersSection } from "@/components/OffersSection";
@@ -21,6 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <FloridaNumberOneSection />
       <VisionSection />
       <ProcessSection />
       <PortfolioSection />
