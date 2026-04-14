@@ -41,36 +41,6 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /** Close drawer on navigation, resize to desktop, or Escape — avoids stuck overlay. */
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    const onResize = () => {
-      if (window.matchMedia("(min-width: 768px)").matches) setMenuOpen(false);
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMenuOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [menuOpen]);
-
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
-
   const fg = heroBarClear ? "text-hero-fg" : "";
 
   const navInactive = heroBarClear
@@ -210,7 +180,7 @@ export function SiteHeader() {
       <div
         id="mobile-nav"
         className={`fixed inset-0 z-40 flex flex-col bg-background px-[var(--container-pad)] pt-24 transition-opacity duration-300 md:hidden ${
-          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none hidden opacity-0"
+          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!menuOpen}
       >
