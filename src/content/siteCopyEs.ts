@@ -1,5 +1,5 @@
 import type { SiteCopy } from "@/content/siteCopy";
-import { routes } from "@/lib/site";
+import { contactEmail, routes } from "@/lib/site";
 
 const contactHref = routes.contact;
 
@@ -239,7 +239,7 @@ export const siteCopyEs: SiteCopy = {
       "Cuéntanos sobre tu techo — reemplazo, gotera, inspección o reclamo por tormenta: te responderemos con los siguientes pasos.",
     quoteLead:
       "Proyecto o duda sobre el techo: respondemos con los siguientes pasos.",
-    email: "Centricgroup.us@gmail.com",
+    email: contactEmail,
   },
   locationPage: {
     title: "Ubicación y zona de servicio",

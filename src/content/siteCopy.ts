@@ -1,4 +1,4 @@
-import { routes } from "@/lib/site";
+import { contactEmail, routes } from "@/lib/site";
 
 export const siteCopy = {
   brand: "Sovereign",
@@ -240,7 +240,7 @@ export const siteCopy = {
       "Tell us about your roof — replacement, leak, inspection, or storm claim — we’ll follow up with next steps.",
     quoteLead:
       "Roof project or question — we reply with next steps.",
-    email: "Centricgroup.us@gmail.com",
+    email: contactEmail,
   },
   locationPage: {
     title: "Location & service area",
