@@ -146,11 +146,40 @@ export function IconPenLine(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function IconHammer(props: SVGProps<SVGSVGElement>) {
+/** Installation / on-site work — Lucide `wrench` at project stroke weight */
+export function IconWrench(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
       <path
-        d="m15 12-8.5 8.5a2.12 2.12 0 1 1-3-3L12 9M13.5 3.5 17 7l-4 4-3.5-3.5 3.5-3.5Z"
+        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        stroke={stroke}
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/** Permits, approvals, and production scheduling */
+export function IconCalendarCheck(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+      <path
+        d="M8 2v4M16 2v4M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
+        stroke={stroke}
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3 10h18"
+        stroke={stroke}
+        strokeWidth="1.75"
+        strokeLinecap="round"
+      />
+      <path
+        d="m15 16 2 2 4-4"
         stroke={stroke}
         strokeWidth="1.75"
         strokeLinecap="round"

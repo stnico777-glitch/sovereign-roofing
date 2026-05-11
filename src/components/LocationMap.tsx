@@ -17,13 +17,7 @@ export function LocationMap({ src, title, caption, className = "" }: LocationMap
     >
       <div className="relative aspect-[16/9] w-full min-h-[220px] max-h-[min(48vh,420px)] md:aspect-[2.1/1] md:min-h-[260px]">
         {/* Base map — slightly cooled so the overlay reads as one palette */}
-        <div
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-          style={{
-            filter: "grayscale(0.2) saturate(0.92) brightness(1.02) contrast(1.02)",
-          }}
-          aria-hidden
-        >
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
           <iframe
             title={title}
             src={src}

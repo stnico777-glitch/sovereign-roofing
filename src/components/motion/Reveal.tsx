@@ -3,9 +3,10 @@
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
-const OFFSET = 36;
+/** Slightly shorter travel + longer tween reads smoother on scroll */
+const OFFSET = 26;
 
-const ease = [0.16, 1, 0.3, 1] as const;
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export type RevealFrom = "left" | "right" | "up";
 
@@ -32,7 +33,7 @@ type RevealProps = {
   delay?: number;
   /** Hero: animate on mount. Sections: animate when scrolled into view. */
   trigger?: "mount" | "view";
-  /** Used with trigger="view" */
+  /** Fraction of the element that must be visible before animating; higher needs more scroll. */
   viewportAmount?: number | "some" | "all";
 };
 
@@ -42,7 +43,7 @@ export function Reveal({
   from = "up",
   delay = 0,
   trigger = "view",
-  viewportAmount = 0.25,
+  viewportAmount = 0.48,
 }: RevealProps) {
   const reduce = useReducedMotion();
 
@@ -58,7 +59,7 @@ export function Reveal({
         className={className}
         initial={initial}
         animate={shownState}
-        transition={{ duration: 0.65, delay, ease }}
+        transition={{ duration: 1.12, delay, ease }}
       >
         {children}
       </motion.div>
@@ -71,7 +72,7 @@ export function Reveal({
       initial={initial}
       whileInView={shownState}
       viewport={{ once: true, amount: viewportAmount }}
-      transition={{ duration: 0.65, delay, ease }}
+      transition={{ duration: 1.12, delay, ease }}
     >
       {children}
     </motion.div>
@@ -82,25 +83,25 @@ export function Reveal({
 export const staggerContainerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.04 },
+    transition: { staggerChildren: 0.18, delayChildren: 0.18 },
   },
 };
 
 export const staggerItemVariants = {
-  hidden: { opacity: 0, y: 22 },
+  hidden: { opacity: 0, y: 18 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease },
+    transition: { duration: 0.98, ease },
   },
 };
 
 export const staggerItemFromLeftVariants = {
-  hidden: { opacity: 0, x: -24, y: 0 },
+  hidden: { opacity: 0, x: -20, y: 0 },
   visible: {
     opacity: 1,
     x: 0,
     y: 0,
-    transition: { duration: 0.55, ease },
+    transition: { duration: 0.98, ease },
   },
 };

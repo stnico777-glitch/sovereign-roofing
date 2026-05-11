@@ -22,9 +22,9 @@ export function VisionSection() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-2 pb-[var(--section-y)] lg:flex-row lg:items-center lg:justify-between lg:gap-12 xl:gap-16">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-2 pb-[var(--section-y)] lg:flex-row lg:items-center lg:justify-between lg:gap-12 xl:gap-14">
         <Reveal
-          className="flex w-full min-w-0 flex-1 flex-col items-center text-center lg:max-w-xl"
+          className="flex w-full min-w-0 shrink-0 flex-col items-center text-center lg:max-w-xl lg:basis-[min(100%,36rem)]"
           from="left"
         >
           <p className="font-sans text-[0.8125rem] font-medium tracking-[0.32em] text-accent uppercase">
@@ -41,7 +41,11 @@ export function VisionSection() {
           </p>
         </Reveal>
 
-        <Reveal from="right" delay={0.1}>
+        <Reveal
+          from="right"
+          delay={0.1}
+          className="w-full min-w-0 flex-1 lg:flex-[1.12]"
+        >
           <QuoteRequestForm variant="vision" idPrefix="vision-quote" />
         </Reveal>
       </div>

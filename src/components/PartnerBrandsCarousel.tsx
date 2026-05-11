@@ -29,7 +29,7 @@ export function PartnerBrandsCarousel({
       <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[color-mix(in_srgb,var(--background),transparent_0%)] to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[color-mix(in_srgb,var(--background),transparent_0%)] to-transparent" />
 
-      <div className="kc-marquee flex items-center gap-0 whitespace-nowrap [animation-duration:44s]">
+      <div className="kc-marquee flex items-center gap-0 whitespace-nowrap [animation-duration:56s]">
         <LogoRow items={items} />
         <LogoRow items={items} ariaHidden />
       </div>

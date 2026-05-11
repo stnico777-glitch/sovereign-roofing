@@ -65,7 +65,7 @@ function FieldShell({
   const shell =
     variant === "vision"
       ? "border-border bg-background/85"
-      : "border-border bg-surface-muted/90 backdrop-blur-sm";
+      : "border-border bg-surface-muted";
   const iconWrap =
     variant === "vision"
       ? "border-accent/20 bg-pill-bg/80"
@@ -129,10 +129,6 @@ function QuoteLoadingOverlay({
   label: string;
 }) {
   const reduce = useReducedMotion();
-  const panel =
-    variant === "vision"
-      ? "bg-background/95 backdrop-blur-md ring-1 ring-border"
-      : "bg-background/95 backdrop-blur-md ring-1 ring-border";
 
   return (
     <motion.div
@@ -141,8 +137,8 @@ function QuoteLoadingOverlay({
       aria-busy="true"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: reduce ? 0 : 0.22 }}
-      className={`absolute inset-0 z-[40] flex flex-col items-center justify-center gap-4 px-6 ${panel}`}
+      transition={{ duration: reduce ? 0 : 0.35 }}
+      className="absolute inset-0 z-[40] flex flex-col items-center justify-center gap-4 bg-background px-6 ring-1 ring-border"
     >
       <div
         className="h-11 w-11 rounded-full border-2 border-accent/25 border-t-accent motion-reduce:border-accent/60 motion-reduce:animate-none animate-spin"
@@ -444,7 +440,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
           aria-live="polite"
           initial={{ opacity: 0, y: reduce ? 0 : 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: reduce ? 0 : 0.4, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: reduce ? 0 : 0.55, ease: [0.22, 1, 0.36, 1] }}
           className={
             variant === "vision"
               ? `mt-3 font-sans text-[13px] leading-snug sm:text-sm ${submitState === "success" ? "text-emerald-800" : "text-red-700"}`
@@ -504,7 +500,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
   }
 
   return (
-    <div className="relative w-full max-w-[min(100%,28rem)] shrink-0 lg:mx-0 lg:mt-0 lg:w-[min(100%,28rem)]">
+    <div className="relative w-full max-w-[min(100%,38rem)] shrink-0 lg:mx-0 lg:mt-0 lg:ml-auto">
       <div
         className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent/15 via-transparent to-transparent opacity-80 blur-sm"
         aria-hidden

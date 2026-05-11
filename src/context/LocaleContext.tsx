@@ -39,7 +39,8 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
-      if (isLocale(stored)) setLocaleState(stored);
+      if (!isLocale(stored)) return;
+      queueMicrotask(() => setLocaleState(stored));
     } catch {
       /* ignore */
     }

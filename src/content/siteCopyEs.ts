@@ -162,8 +162,8 @@ export const siteCopyEs: SiteCopy = {
     subtitle:
       "Reemplazos, reparaciones y techos nuevos que hemos completado en el Sur de Florida.",
     row2Subtitle: "Más trabajos de techado y exterior recientes.",
-    reelVideoSrc: "/hero.mp4",
-    reelVideoSrc2: "/hero-reversed.mp4",
+    reelVideoSrc: "/selected-work-reel-top.mp4",
+    reelVideoSrc2: "/selected-work-reel-reversed.mp4",
     reelBridgeTitle: "En obra",
   },
   offers: {
@@ -209,6 +209,27 @@ export const siteCopyEs: SiteCopy = {
       },
     ],
   },
+  servicesSpotlight: {
+    eyebrow: "Donde nos especializamos",
+    title: "Residencial y comercial",
+    subtitle:
+      "Tejas en pendiente para viviendas y sistemas de membrana reflectantes para cubiertas planas — misma agenda y estándares de obra Sovereign.",
+    cta: "Ver",
+    items: [
+      {
+        category: "Residencial",
+        title: "Instalación experta de tejas",
+        alt: "Techadores instalando tejas asfálticas en un techo residencial empinado bajo cielo despejado",
+        imageSrc: "/portfolio/project-01-residential-shingles.png",
+      },
+      {
+        category: "Comercial",
+        title: "Sistema de membrana fría",
+        alt: "Cuadrilla en cubierta plana comercial instalando membrana blanca tipo techo frío",
+        imageSrc: "/portfolio/project-02-commercial-membrane.png",
+      },
+    ],
+  },
   floridaNumberOne: {
     headlineLead: "LA OPCIÓN #1 DEL SUR DE FLORIDA",
     headlineAccent: "PARA TECHADO",
@@ -242,9 +263,16 @@ export const siteCopyEs: SiteCopy = {
     email: contactEmail,
   },
   locationPage: {
+    heroEyebrow: "Dónde trabajamos",
+    expansionRibbon: "Expansión · Naples · Orlando",
+    expansionCardTitle: "Nuevos mercados",
+    expansionCardBody:
+      "Estamos incorporando proyectos en Naples y Orlando junto a nuestra base en el Sur de Florida — indica tu dirección para disponibilidad.",
+    heroDirectoryStat: "{count} ciudades y condados en el directorio",
+    heroContactCta: "Consultar disponibilidad para tu dirección",
     title: "Ubicación y zona de servicio",
     lead:
-      "Sovereign Roofing trabaja con propietarios en todo el Sur de Florida: reemplazo de techo, reparaciones, inspecciones y apoyo por tormentas.",
+      "Sovereign Roofing trabaja con propietarios en todo el Sur de Florida: reemplazo de techo, reparaciones, inspecciones y apoyo por tormentas. Estamos ampliando cobertura a Naples y Orlando; comparte tu dirección y confirmamos disponibilidad.",
     body: [
       "Coordinamos visitas al sitio, trámites municipales y cronogramas de producción para que tu proyecto siga avanzando.",
       "Escríbenos desde la página de contacto para hablar de tu dirección, plazo y alcance.",
@@ -254,10 +282,19 @@ export const siteCopyEs: SiteCopy = {
     mapCaption: "Sur de Florida — área metropolitana de Miami y condados cercanos",
     serviceAreasHeading: "Zonas que atendemos",
     serviceAreasFootnote:
-      "¿No ves tu zona? Contáctanos: a menudo coordinamos proyectos entre condados cuando el alcance lo amerita.",
+      "Expansión a Naples y Orlando — pregúntanos por la agenda en esas zonas. ¿No ves tu ciudad en la lista? Contáctanos: a menudo coordinamos proyectos entre condados cuando el alcance lo amerita.",
     schemaItemListName: "Sovereign Roofing — Zonas de servicio en el Sur de Florida",
     schemaItemListDescription:
       "Ciudades y condados donde Sovereign Roofing ofrece techado residencial, reparaciones e inspecciones.",
+  },
+  instagram: {
+    eyebrow: "Instagram",
+    title: "Trabajos recientes en el feed",
+    description:
+      "Fotos de proyectos, reels desde la obra y novedades mientras avanzamos por el Sur de Florida — desliza en el móvil.",
+    followCta: "Seguir en Instagram",
+    embedPlaceholder:
+      "Usa Seguir arriba para ver toda la galería. Un feed en vivo puede mostrarse aquí tras configurar el embed una sola vez en el hosting.",
   },
   footer: {
     rights: "Sovereign Roofing",
@@ -271,6 +308,8 @@ export const siteCopyEs: SiteCopy = {
     footerNavAria: "Pie de página",
     introAria: "Introducción",
     headerBrandHomeAria: "Inicio de Sovereign Roofing",
+    themeToggleToDark: "Cambiar a modo oscuro",
+    themeToggleToLight: "Cambiar a modo claro",
     mapIframeTitle: "Mapa de Florida — zona de servicio de Sovereign Roofing",
     offersEyebrow: "Lo que hacemos",
     aboutEyebrow: "Quiénes somos",
@@ -290,13 +329,10 @@ export const siteCopyEs: SiteCopy = {
     floridaNumberOneAria: "Por qué los propietarios eligen Sovereign Roofing",
     partnerBrandsCarouselRegion: "Marcas asociadas",
     trustBannerAria: "Calificaciones en plataformas de reseñas",
-    serviceAreasPreviewBlurb:
-      "Miami y todo el Sur de Florida — {count} ciudades y condados. Una muestra abajo; consulta el directorio completo de cada zona que cubrimos.",
-    serviceAreasCoverageSuffix: "para el mapa de cobertura y más detalle.",
     reviewsEmptyHint: "Añade reseñas en",
     reviewsEmptyCode: "siteCopy.googleReviews.reviews",
     locationDetailParagraph:
-      "Sovereign Roofing ofrece reemplazo y reparación de techos residenciales, inspecciones y apoyo con documentación por tormentas en Miami-Dade, Broward, Palm Beach y comunidades selectas del condado de Monroe. Usa el directorio siguiente para encontrar tu ciudad o condado.",
+      "Sovereign Roofing ofrece reemplazo y reparación de techos residenciales, inspecciones y apoyo con documentación por tormentas en Miami-Dade, Broward, Palm Beach y comunidades selectas del condado de Monroe, con expansión en marcha hacia Naples y Orlando. Usa el directorio siguiente para encontrar tu ciudad o condado.",
     locationDirectoryIntro:
       "{count} ciudades y condados en el Sur de Florida: cada una con contexto local para quienes buscan contratistas de remodelación, ayuda con permisos y obra interior cerca de ti.",
     locationPhotoCredit:
@@ -323,55 +359,48 @@ export const siteCopyEs: SiteCopy = {
     quoteSubmitSuccess: "Nos pondremos en contacto en breve.",
     quoteSubmitError:
       "No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos por correo.",
+    instagramIframeTitle: "Sovereign Roofing — feed de Instagram",
   },
 };
 
 export const portfolioCardsEs = [
   {
-    src: "/portfolio/01.jpg",
-    alt: "Remodelación interior en Sunny Isles Beach",
-    category: "Sunny Isles Beach",
-    title: "Interior residencial",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/02.jpg",
-    alt: "Detalle de acabado y carpintería",
-    category: "Sunny Isles Beach",
-    title: "Gabinetes y acabados",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/03.jpg",
-    alt: "Proyecto en Aventura — sala",
-    category: "Aventura",
-    title: "Residencia Turnberry",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/04.jpg",
-    alt: "Proyecto en Aventura — interior",
-    category: "Aventura",
-    title: "Plano abierto e iluminación",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/05.jpg",
-    alt: "Remodelación en Aventura en curso",
-    category: "Aventura",
-    title: "Cocina y flujo con la sala",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/06.jpg",
-    alt: "Trabajo interior en obra",
+    src: "/portfolio/project-03-mediterranean-estate.png",
+    alt: "Residencia de estilo mediterráneo con techo de teja terracota y jardín paisajístico",
     category: "Residencial",
-    title: "Azulejo y detalle",
+    title: "Estética mediterránea",
+    cta: "Ver",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-04-metal-roof.png",
+    alt: "Techo metálico corrugado gris en cumbrera sobre fachada blanca contemporánea",
+    category: "Techos metálicos",
+    title: "Instalación de lámina corrugada",
+    cta: "Ver",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-05-architectural-shingles.png",
+    alt: "Tejas arquitectónicas con revestimiento de piedra y molduras blancas",
+    category: "Exterior",
+    title: "Tejas y piedra",
+    cta: "Ver",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-06-community-overview.png",
+    alt: "Vista aérea de vecindario suburbano con techos de teja y tejas asfálticas",
+    category: "Aérea",
+    title: "Re-techos en comunidades",
+    cta: "Ver",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-01-residential-shingles.png",
+    alt: "Cuadrilla instalando tejas arquitectónicas en un reemplazo de techo residencial empinado",
+    category: "Residencial",
+    title: "Reemplazo integral",
     cta: "Ver",
     href: contactHref,
   },
@@ -379,50 +408,34 @@ export const portfolioCardsEs = [
 
 export const portfolioCardsRow2Es = [
   {
-    src: "/portfolio/07.jpg",
-    alt: "Renovación de cocina e interior",
-    category: "Cocina",
-    title: "Actualización de gabinetes y encimera",
+    src: "/portfolio/project-08-standing-seam-estate.png",
+    alt: "Vistas aéreas frontal y trasera de una finca con techo metálico standing seam oscuro",
+    category: "Metal",
+    title: "Finca con standing seam",
     cta: "Ver",
     href: contactHref,
   },
   {
-    src: "/portfolio/08.jpg",
-    alt: "Baño e instalación de azulejo",
-    category: "Baño",
-    title: "Tocador y muro de azulejo",
+    src: "/portfolio/project-09-aerial-shingle-detail.png",
+    alt: "Vista cenital de techo residencial complejo con tejas arquitectónicas",
+    category: "Detalle",
+    title: "Geometría de techo compleja",
     cta: "Ver",
     href: contactHref,
   },
   {
-    src: "/portfolio/09.jpg",
-    alt: "Yeso interior y molduras",
-    category: "Yeso",
-    title: "Muros y vanos",
+    src: "/portfolio/project-10-valley-shingles.png",
+    alt: "Detalle de valle de techo con tejas arquitectónicas grises bajo cielo nublado",
+    category: "Detalle",
+    title: "Valles estancos",
     cta: "Ver",
     href: contactHref,
   },
   {
-    src: "/portfolio/10.jpg",
-    alt: "Distribución de azulejo y piso",
-    category: "Azulejo",
-    title: "Piso y muro",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/11.jpg",
-    alt: "Detalle interior residencial",
-    category: "Residencial",
-    title: "Carpintería de acabado",
-    cta: "Ver",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/12.jpg",
-    alt: "Remodelación de espacio habitable",
-    category: "Interiores",
-    title: "Iluminación y carpintería",
+    src: "/portfolio/project-11-barrel-tile.png",
+    alt: "Casa mediterránea con teja barrel gris, piedra y cielo azul",
+    category: "Teja",
+    title: "Línea de teja barrel",
     cta: "Ver",
     href: contactHref,
   },

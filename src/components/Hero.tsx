@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { BrandLockup } from "@/components/BrandLockup";
 import { Reveal } from "@/components/motion/Reveal";
 import { ReviewCard } from "@/components/ReviewCard";
 import { useLocale } from "@/context/LocaleContext";
-import { routes } from "@/lib/site";
+import { useClipLoopVideoWhenVisible } from "@/lib/useClipLoopVideoWhenVisible";
+import { heroOpeningClipDurationSec, routes } from "@/lib/site";
 
 function ArrowIcon() {
   return (
@@ -22,7 +24,30 @@ function ArrowIcon() {
   );
 }
 
-const heroLogoEase = [0.16, 1, 0.3, 1] as const;
+const heroLogoEase = [0.22, 1, 0.36, 1] as const;
+
+function HeroClipVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+  useClipLoopVideoWhenVisible(ref, {
+    clipDurationSec: heroOpeningClipDurationSec,
+    rootMargin: "80px",
+    threshold: 0.01,
+  });
+
+  return (
+    <video
+      ref={ref}
+      className="absolute inset-0 h-full w-full object-cover object-center"
+      autoPlay
+      muted
+      playsInline
+      loop={false}
+      preload="auto"
+    >
+      <source src="/hero.mp4" type="video/mp4" />
+    </video>
+  );
+}
 
 export function Hero() {
   const { copy } = useLocale();
@@ -34,24 +59,11 @@ export function Hero() {
       aria-label={copy.ui.introAria}
     >
       <div className="absolute inset-0 overflow-hidden motion-reduce:hidden">
-        <video
-          className="absolute inset-0 h-full w-full origin-center scale-[1.06] object-cover object-center"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/hero.mp4" type="video/mp4" />
-        </video>
+        <HeroClipVideo />
       </div>
 
       <div
         className="absolute inset-0 hidden bg-gradient-to-br from-reel-chrome via-[#e4e4e7] to-background motion-reduce:block"
-        aria-hidden
-      />
-
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[var(--hero-fade-height)] bg-gradient-to-b from-transparent via-background/8 to-background"
         aria-hidden
       />
 
@@ -65,7 +77,7 @@ export function Hero() {
             className="absolute left-[var(--container-pad)] top-[5.75rem] z-20 sm:top-28 md:top-[7.25rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.65, ease: heroLogoEase }}
+            transition={{ duration: 0.95, ease: heroLogoEase }}
           >
             <BrandLockup size="hero" />
           </motion.div>
@@ -91,7 +103,7 @@ export function Hero() {
               </Link>
               <Link
                 href={routes.contact}
-                className="inline-flex items-center rounded-full border border-white/45 bg-white/10 px-5 py-3 font-sans text-xs font-semibold tracking-[0.18em] text-white shadow-[0_2px_20px_rgba(0,0,0,0.2)] backdrop-blur-md transition hover:border-white/65 hover:bg-white/20"
+                className="inline-flex items-center rounded-full border border-white/45 bg-black/35 px-5 py-3 font-sans text-xs font-semibold tracking-[0.18em] text-white shadow-[0_2px_20px_rgba(0,0,0,0.2)] transition hover:border-white/65 hover:bg-black/45"
               >
                 {copy.hero.ctaSecondary}
               </Link>
@@ -104,9 +116,9 @@ export function Hero() {
         from="right"
         trigger="mount"
         delay={0.24}
-        className="absolute bottom-6 right-[var(--container-pad)] z-20 w-[min(100%,18rem)] md:bottom-10 md:w-[20rem]"
+        className="absolute bottom-6 right-[var(--container-pad)] z-20 w-[min(100%,14rem)] md:bottom-10 md:w-[15.5rem]"
       >
-        <ReviewCard />
+        <ReviewCard variant="hero" />
       </Reveal>
     </section>
   );

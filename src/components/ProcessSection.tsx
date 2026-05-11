@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import {
-  IconClipboardCheck,
+  IconCalendarCheck,
   IconCompass,
   IconDoorOpen,
-  IconHammer,
   IconPenLine,
+  IconWrench,
 } from "@/components/icons/ThemeIcons";
 import {
   Reveal,
@@ -21,8 +21,8 @@ import { routes } from "@/lib/site";
 const processIcons = [
   IconCompass,
   IconPenLine,
-  IconHammer,
-  IconClipboardCheck,
+  IconCalendarCheck,
+  IconWrench,
   IconDoorOpen,
 ] as const;
 
@@ -43,19 +43,49 @@ export function ProcessSection() {
       <div className="mx-auto max-w-6xl">
         <header className="mb-4 md:mb-6">
           <div className="relative mx-auto flex min-h-[13rem] min-w-0 flex-col items-center justify-center overflow-visible px-2 py-3 sm:min-h-[15rem] md:min-h-[16rem]">
-            <Image
-              src="/process-hardhat.png?v=2"
-              alt=""
-              width={1152}
-              height={928}
-              unoptimized
-              className="pointer-events-none absolute left-1/2 top-[4%] z-0 h-[min(10rem,52vw)] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 bg-transparent object-contain opacity-90 sm:h-[min(11rem,48vw)] md:top-[3%] md:h-[min(12.5rem,38vw)]"
-              sizes="(max-width: 768px) 52vw, 38vw"
-              priority
-            />
+            {reduce ? (
+              <Image
+                src="/process-hardhat.png?v=2"
+                alt=""
+                width={1152}
+                height={928}
+                unoptimized
+                className="pointer-events-none absolute left-1/2 top-[4%] z-0 h-[min(10rem,52vw)] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 bg-transparent object-contain opacity-90 sm:h-[min(11rem,48vw)] md:top-[3%] md:h-[min(12.5rem,38vw)]"
+                sizes="(max-width: 768px) 52vw, 38vw"
+                priority
+              />
+            ) : (
+              <motion.div
+                className="pointer-events-none absolute left-1/2 top-[4%] z-0 h-[min(10rem,52vw)] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 sm:h-[min(11rem,48vw)] md:top-[3%] md:h-[min(12.5rem,38vw)]"
+                initial={{ opacity: 0, y: 48, rotate: -14, scale: 0.82 }}
+                whileInView={{
+                  opacity: 0.9,
+                  y: 0,
+                  rotate: 0,
+                  scale: 1,
+                }}
+                viewport={{ once: true, amount: 0.42 }}
+                transition={{
+                  duration: 1.35,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <Image
+                  src="/process-hardhat.png?v=2"
+                  alt=""
+                  width={1152}
+                  height={928}
+                  unoptimized
+                  className="h-full w-auto max-w-none bg-transparent object-contain"
+                  sizes="(max-width: 768px) 52vw, 38vw"
+                  priority
+                />
+              </motion.div>
+            )}
             <Reveal
               className="relative z-10 flex w-full max-w-2xl flex-col items-center pt-8 text-center sm:pt-9 md:pt-10"
               from="up"
+              viewportAmount={0.42}
             >
               <p className="font-sans text-[0.75rem] font-medium tracking-[0.28em] text-accent uppercase">
                 {p.eyebrow}
@@ -66,7 +96,7 @@ export function ProcessSection() {
               >
                 {p.title}
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl rounded-lg bg-background/55 px-3 py-2 font-sans text-sm leading-relaxed text-muted-light backdrop-blur-sm md:bg-background/45 md:text-base">
+              <p className="mx-auto mt-4 max-w-2xl rounded-lg bg-background/80 px-3 py-2 font-sans text-sm leading-relaxed text-muted-light md:bg-background/70 md:text-base">
                 {p.subtitle}
               </p>
             </Reveal>
@@ -116,7 +146,7 @@ export function ProcessSection() {
               variants={staggerContainerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.12 }}
+              viewport={{ once: true, amount: 0.4 }}
             >
               {p.steps.map((step, i) => {
                 const StepIcon = processIcons[i] ?? IconCompass;
@@ -125,7 +155,12 @@ export function ProcessSection() {
                     key={step.title}
                     variants={staggerItemVariants}
                     whileHover={{ y: -4, scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 24 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 34,
+                      mass: 0.85,
+                    }}
                     className={stepCardClass}
                   >
                     <div className="flex items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
@@ -157,7 +192,8 @@ export function ProcessSection() {
         <Reveal
           className="mt-12 flex flex-col items-center justify-center gap-6 border-t border-border/60 pt-10 text-center md:flex-row md:gap-10 md:text-left"
           from="up"
-          delay={0.06}
+          delay={0.08}
+          viewportAmount={0.45}
         >
           <p className="max-w-xl font-sans text-xs font-medium tracking-[0.18em] text-muted-light uppercase">
             {p.trustLine}

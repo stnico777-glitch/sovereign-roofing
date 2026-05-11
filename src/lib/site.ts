@@ -8,6 +8,11 @@ export const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ||
   "sovereignroofing.miami@gmail.com";
 
+/** Instagram profile path (no @). Override with `NEXT_PUBLIC_INSTAGRAM_HANDLE`. */
+export const instagramHandle =
+  process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE?.trim().replace(/^@/, "") ||
+  "sovereignroofing_";
+
 export const routes = {
   home: "/",
   projects: "/projects",
@@ -24,3 +29,9 @@ export const defaultTitle =
 
 export const defaultDescription =
   "Roof replacement, repairs, inspections, and storm-ready systems. Sovereign Roofing delivers honest estimates, clean job sites, and workmanship you can see from the curb.";
+
+/** Homepage hero: loop first N seconds of `/hero.mp4` before restarting. */
+export const heroOpeningClipDurationSec = 10;
+
+/** Portfolio “On site” dual-strip reel: each clip loops its first N seconds (forward + reversed). */
+export const portfolioReelClipDurationSec = 7;

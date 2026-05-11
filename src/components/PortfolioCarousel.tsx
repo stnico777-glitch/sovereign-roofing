@@ -106,7 +106,7 @@ export function PortfolioCarousel({
             >
               {title}
             </h2>
-            <p className="mt-2 max-w-xl font-sans text-sm text-muted md:text-base">
+            <p className="mt-2 max-w-xl font-sans text-sm leading-relaxed text-foreground/82 md:text-base md:leading-relaxed md:text-foreground/88">
               {subtitle}
             </p>
           </Reveal>
@@ -155,19 +155,19 @@ export function PortfolioCarousel({
                 priority={i < priorityCount}
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent"
                 aria-hidden
               />
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-8">
-                <p className="font-sans text-xs font-semibold tracking-[0.22em] text-muted-light/95 uppercase">
+                <p className="font-sans text-xs font-semibold tracking-[0.22em] text-accent uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]">
                   {item.category}
                 </p>
-                <h3 className="text-display mt-1 text-xl font-bold leading-tight text-muted-light md:text-2xl">
+                <h3 className="text-display mt-1 text-xl font-bold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)] md:text-2xl">
                   {item.title}
                 </h3>
                 <Link
                   href={item.href}
-                  className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full border border-accent/45 bg-muted-light/12 px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-muted-light uppercase shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md backdrop-saturate-150 transition hover:border-accent/65 hover:bg-muted-light/18 hover:backdrop-blur-lg"
+                  className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full border border-white/50 bg-black/55 px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-white uppercase shadow-[0_4px_20px_rgba(0,0,0,0.35)] transition hover:border-white/65 hover:bg-black/65 hover:shadow-[0_6px_24px_rgba(0,0,0,0.45)]"
                 >
                   {item.cta}
                 </Link>
@@ -185,7 +185,7 @@ export function PortfolioCarousel({
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.38 }}
         >
           {cards.map((item, i) => (
             <motion.article
@@ -193,7 +193,12 @@ export function PortfolioCarousel({
               data-carousel-card
               variants={staggerItemVariants}
               whileHover={{ y: -5, scale: 1.015 }}
-              transition={{ type: "spring", stiffness: 420, damping: 26 }}
+              transition={{
+                type: "spring",
+                stiffness: 280,
+                damping: 32,
+                mass: 0.9,
+              }}
               className="relative w-[min(78vw,420px)] shrink-0 snap-start overflow-hidden bg-surface-muted shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition-shadow duration-200 hover:shadow-[0_18px_48px_rgba(0,0,0,0.35)]"
               style={{ aspectRatio: "4 / 5" }}
             >
@@ -206,19 +211,19 @@ export function PortfolioCarousel({
                 priority={i < priorityCount}
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent"
                 aria-hidden
               />
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-8">
-                <p className="font-sans text-xs font-semibold tracking-[0.22em] text-muted-light/95 uppercase">
+                <p className="font-sans text-xs font-semibold tracking-[0.22em] text-accent uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]">
                   {item.category}
                 </p>
-                <h3 className="text-display mt-1 text-xl font-bold leading-tight text-muted-light md:text-2xl">
+                <h3 className="text-display mt-1 text-xl font-bold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)] md:text-2xl">
                   {item.title}
                 </h3>
                 <Link
                   href={item.href}
-                  className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full border border-accent/45 bg-muted-light/12 px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-muted-light uppercase shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md backdrop-saturate-150 transition hover:border-accent/65 hover:bg-muted-light/18 hover:backdrop-blur-lg"
+                  className="pointer-events-auto mt-4 inline-flex items-center justify-center rounded-full border border-white/50 bg-black/55 px-6 py-2.5 font-sans text-xs font-semibold tracking-[0.2em] text-white uppercase shadow-[0_4px_20px_rgba(0,0,0,0.35)] transition hover:border-white/65 hover:bg-black/65 hover:shadow-[0_6px_24px_rgba(0,0,0,0.45)]"
                 >
                   {item.cta}
                 </Link>

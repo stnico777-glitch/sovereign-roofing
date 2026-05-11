@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/AboutSection";
 import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
+import { InstagramFeedSectionWrapper } from "@/components/InstagramFeedSectionWrapper";
 import { Hero } from "@/components/Hero";
 import { FloridaNumberOneSection } from "@/components/FloridaNumberOneSection";
 import { OffersSection } from "@/components/OffersSection";
@@ -33,6 +34,7 @@ export default function HomePage() {
       <FloridaNumberOneSection />
       <AboutSection />
       <GoogleReviewsSection />
+      <InstagramFeedSectionWrapper />
     </>
   );
 }

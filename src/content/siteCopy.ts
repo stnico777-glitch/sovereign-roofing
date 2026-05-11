@@ -162,8 +162,8 @@ export const siteCopy = {
       "Replacements, repairs, and re-roofs we’ve completed across South Florida.",
     row2Subtitle:
       "More roofing and exterior work from recent jobs.",
-    reelVideoSrc: "/hero.mp4",
-    reelVideoSrc2: "/hero-reversed.mp4",
+    reelVideoSrc: "/selected-work-reel-top.mp4",
+    reelVideoSrc2: "/selected-work-reel-reversed.mp4",
     reelBridgeTitle: "On site",
   },
   offers: {
@@ -209,6 +209,28 @@ export const siteCopy = {
       },
     ],
   },
+  /** Hero duo on /services — residential vs commercial (matches portfolio photography). */
+  servicesSpotlight: {
+    eyebrow: "Where we specialize",
+    title: "Residential & commercial",
+    subtitle:
+      "Steep-slope shingles for homes and reflective membrane systems for low-slope buildings — same Sovereign scheduling and site standards.",
+    cta: "View",
+    items: [
+      {
+        category: "Residential",
+        title: "Expert shingle installation",
+        alt: "Roofers installing asphalt shingles on a steep residential roof under a clear sky",
+        imageSrc: "/portfolio/project-01-residential-shingles.png",
+      },
+      {
+        category: "Commercial",
+        title: "Cool roof membrane system",
+        alt: "Commercial flat roof crew installing a white cool-roof membrane system",
+        imageSrc: "/portfolio/project-02-commercial-membrane.png",
+      },
+    ],
+  },
   /** Keys-style trust strip: headline, supplier row, gradient quote CTA, supporting copy */
   floridaNumberOne: {
     headlineLead: "SOUTH FLORIDA'S #1 CHOICE",
@@ -243,9 +265,16 @@ export const siteCopy = {
     email: contactEmail,
   },
   locationPage: {
+    heroEyebrow: "Where we work",
+    expansionRibbon: "Expanding · Naples · Orlando",
+    expansionCardTitle: "Growth markets",
+    expansionCardBody:
+      "We’re onboarding projects in Naples and Orlando alongside our South Florida base — share your address for availability.",
+    heroDirectoryStat: "{count} cities & counties listed",
+    heroContactCta: "Check availability for your address",
     title: "Location & service area",
     lead:
-      "Sovereign Roofing works with homeowners across South Florida — roof replacement, repair, inspections, and storm support.",
+      "Sovereign Roofing works with homeowners across South Florida — roof replacement, repair, inspections, and storm support. We’re expanding into Naples and Orlando; share your address and we’ll confirm availability.",
     body: [
       "We coordinate site visits, municipal submissions, and production schedules so your project stays moving.",
       "Reach out through the contact page to discuss your address, timeline, and scope.",
@@ -256,11 +285,20 @@ export const siteCopy = {
     mapCaption: "South Florida — Miami metro and surrounding counties",
     serviceAreasHeading: "Areas we serve",
     serviceAreasFootnote:
-      "Don’t see your area listed? Contact us — we often coordinate projects across county lines for the right scope.",
+      "Expanding into Naples and Orlando — ask us about scheduling in those markets. Don’t see your area listed? Contact us — we often coordinate projects across county lines for the right scope.",
     /** JSON-LD ItemList for /location */
     schemaItemListName: "Sovereign Roofing — South Florida service areas",
     schemaItemListDescription:
       "Cities and counties where Sovereign Roofing provides residential roofing, repairs, and inspections.",
+  },
+  instagram: {
+    eyebrow: "Instagram",
+    title: "Recent work on the feed",
+    description:
+      "Project photos, reels from site, and updates as we move across South Florida — tap through on mobile.",
+    followCta: "Follow on Instagram",
+    embedPlaceholder:
+      "Use Follow above for the full gallery. A live project feed can load in this space after a one-time embed setup on hosting.",
   },
   footer: {
     rights: "Sovereign Roofing",
@@ -275,6 +313,8 @@ export const siteCopy = {
     footerNavAria: "Footer",
     introAria: "Introduction",
     headerBrandHomeAria: "Sovereign Roofing home",
+    themeToggleToDark: "Switch to dark mode",
+    themeToggleToLight: "Switch to light mode",
     mapIframeTitle: "Map of Florida — Sovereign Roofing service area",
     offersEyebrow: "What we do",
     aboutEyebrow: "Who we are",
@@ -294,15 +334,10 @@ export const siteCopy = {
     floridaNumberOneAria: "Why homeowners choose Sovereign Roofing",
     partnerBrandsCarouselRegion: "Partner brands",
     trustBannerAria: "Ratings on review platforms",
-    /** `{count}` is replaced with the number of service areas */
-    serviceAreasPreviewBlurb:
-      "Miami and all of South Florida — {count} cities and counties. A sample below; see the full directory for every area we cover.",
-    /** After location + link: “for the coverage map and more detail.” */
-    serviceAreasCoverageSuffix: "for the coverage map and more detail.",
     reviewsEmptyHint: "Add reviews in",
     reviewsEmptyCode: "siteCopy.googleReviews.reviews",
     locationDetailParagraph:
-      "Sovereign Roofing provides residential roof replacement, repairs, inspections, and storm documentation support across Miami-Dade, Broward, Palm Beach, and select Monroe County communities. Use the directory below to find your city or county.",
+      "Sovereign Roofing provides residential roof replacement, repairs, inspections, and storm documentation support across Miami-Dade, Broward, Palm Beach, and select Monroe County communities, with expansion underway to Naples and Orlando. Use the directory below to find your city or county.",
     /** `{count}` replaced */
     locationDirectoryIntro:
       "{count} cities and counties across South Florida—each with local context for homeowners searching remodeling contractors, permit help, and interior construction near you.",
@@ -330,6 +365,7 @@ export const siteCopy = {
     quoteSubmitSuccess: "We will be in contact shortly.",
     quoteSubmitError:
       "We couldn’t send that just now. Please try again or email us directly.",
+    instagramIframeTitle: "Sovereign Roofing — Instagram feed",
   },
 };
 
@@ -339,50 +375,42 @@ const contactHref = routes.contact;
 
 export const portfolioCards = [
   {
-    src: "/portfolio/01.jpg",
-    alt: "Interior remodel in Sunny Isles Beach",
-    category: "Sunny Isles Beach",
-    title: "Residential interior",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/02.jpg",
-    alt: "Finish and millwork detail",
-    category: "Sunny Isles Beach",
-    title: "Cabinetry & finishes",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/03.jpg",
-    alt: "Aventura project — living space",
-    category: "Aventura",
-    title: "Turnberry residence",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/04.jpg",
-    alt: "Aventura project — interior view",
-    category: "Aventura",
-    title: "Open layout & lighting",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/05.jpg",
-    alt: "Aventura remodel in progress",
-    category: "Aventura",
-    title: "Kitchen & living flow",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/06.jpg",
-    alt: "On-site interior work",
+    src: "/portfolio/project-03-mediterranean-estate.png",
+    alt: "Luxury Mediterranean-style home with terracotta tile roof and landscaped grounds",
     category: "Residential",
-    title: "Tile & detail work",
+    title: "Mediterranean curb appeal",
+    cta: "View",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-04-metal-roof.png",
+    alt: "Grey corrugated metal hip roof on a contemporary white exterior",
+    category: "Metal roofing",
+    title: "Modern corrugated install",
+    cta: "View",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-05-architectural-shingles.png",
+    alt: "Architectural asphalt shingles with stone veneer siding and crisp white trim",
+    category: "Exterior",
+    title: "Shingles & stone veneer",
+    cta: "View",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-06-community-overview.png",
+    alt: "Aerial view of a suburban neighborhood with tile and shingle roofs at golden hour",
+    category: "Aerial",
+    title: "Neighborhood re-roofs",
+    cta: "View",
+    href: contactHref,
+  },
+  {
+    src: "/portfolio/project-01-residential-shingles.png",
+    alt: "Crew installing architectural shingles on a steep residential roof replacement project",
+    category: "Residential",
+    title: "Full roof replacement",
     cta: "View",
     href: contactHref,
   },
@@ -390,50 +418,34 @@ export const portfolioCards = [
 
 export const portfolioCardsRow2 = [
   {
-    src: "/portfolio/07.jpg",
-    alt: "Kitchen and interior renovation",
-    category: "Kitchen",
-    title: "Cabinet & counter update",
+    src: "/portfolio/project-08-standing-seam-estate.png",
+    alt: "Aerial front and rear views of an estate with dark standing seam metal roofing",
+    category: "Metal",
+    title: "Standing seam estate",
     cta: "View",
     href: contactHref,
   },
   {
-    src: "/portfolio/08.jpg",
-    alt: "Bathroom and tile installation",
-    category: "Bath",
-    title: "Vanity & tile surround",
+    src: "/portfolio/project-09-aerial-shingle-detail.png",
+    alt: "Bird's-eye view of a complex residential roof with architectural shingles",
+    category: "Detail",
+    title: "Complex roof geometry",
     cta: "View",
     href: contactHref,
   },
   {
-    src: "/portfolio/09.jpg",
-    alt: "Interior drywall and trim",
-    category: "Drywall",
-    title: "Walls & openings",
+    src: "/portfolio/project-10-valley-shingles.png",
+    alt: "Roof valley detail with architectural grey shingles against an overcast sky",
+    category: "Detail",
+    title: "Weather-tight valleys",
     cta: "View",
     href: contactHref,
   },
   {
-    src: "/portfolio/10.jpg",
-    alt: "Tile layout and flooring",
+    src: "/portfolio/project-11-barrel-tile.png",
+    alt: "Mediterranean home with grey barrel tile roof, stone veneer, and blue sky",
     category: "Tile",
-    title: "Floor & wall layout",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/11.jpg",
-    alt: "Residential interior detail",
-    category: "Residential",
-    title: "Finish carpentry",
-    cta: "View",
-    href: contactHref,
-  },
-  {
-    src: "/portfolio/12.jpg",
-    alt: "Living space remodel",
-    category: "Interiors",
-    title: "Lighting & millwork",
+    title: "Barrel tile roofline",
     cta: "View",
     href: contactHref,
   },

@@ -1,20 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import {
-  Reveal,
-  staggerContainerVariants,
-  staggerItemVariants,
-} from "@/components/motion/Reveal";
-import { getServiceAreasForLocale } from "@/content/serviceAreasLocale";
 import { useLocale } from "@/context/LocaleContext";
 import type { Locale } from "@/lib/locale";
-import { routes } from "@/lib/site";
-
-const HOME_SERVICE_AREAS_PREVIEW = 6;
 
 type ReviewItem = {
   id: string;
@@ -173,14 +162,9 @@ function ReviewCard({
   );
 }
 
-const serviceAreaCardClass =
-  "rounded-2xl border border-border bg-pill-bg/50 p-6 shadow-sm transition-[box-shadow,transform,border-color] duration-200 hover:border-accent/25 hover:shadow-[0_14px_36px_rgba(0,0,0,0.22)]";
-
 export function GoogleReviewsSection() {
   const { locale, copy } = useLocale();
-  const lp = copy.locationPage;
   const gr = copy.googleReviews;
-  const serviceAreas = getServiceAreasForLocale(locale);
   const reduce = useReducedMotion();
   const reviews: ReviewItem[] = gr.reviews.map((r) => ({
     id: r.id,
@@ -330,98 +314,6 @@ export function GoogleReviewsSection() {
             .
           </p>
         )}
-
-        <section
-          id="service-areas"
-          className="mt-16 border-t border-border pt-12 md:mt-20 md:pt-16"
-          aria-labelledby="home-service-areas-heading"
-        >
-          <Reveal from="up">
-            <div className="mb-6 flex justify-center">
-              <Image
-                src="/process-hardhat.png?v=2"
-                alt=""
-                width={1152}
-                height={928}
-                unoptimized
-                className="h-[4.5rem] w-auto max-w-[11rem] object-contain opacity-[0.92] sm:h-[5.25rem] sm:max-w-[12.5rem]"
-                sizes="(max-width: 640px) 11rem, 12.5rem"
-              />
-            </div>
-            <h3
-              id="home-service-areas-heading"
-              className="text-display text-center text-2xl font-bold text-foreground md:text-3xl"
-            >
-              {lp.serviceAreasHeading}
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-center font-sans text-sm text-muted md:text-base">
-              {copy.ui.serviceAreasPreviewBlurb.replace(
-                "{count}",
-                String(serviceAreas.length),
-              )}
-            </p>
-          </Reveal>
-
-          {reduce ? (
-            <ul className="mt-10 grid gap-6 md:grid-cols-2">
-              {serviceAreas.slice(0, HOME_SERVICE_AREAS_PREVIEW).map((area) => (
-                <li key={area.id} className={serviceAreaCardClass}>
-                  <h4 className="text-display text-lg font-semibold text-accent">
-                    {area.name}
-                  </h4>
-                  <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
-                    {area.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <motion.ul
-              className="mt-10 grid gap-6 md:grid-cols-2"
-              variants={staggerContainerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
-            >
-              {serviceAreas.slice(0, HOME_SERVICE_AREAS_PREVIEW).map((area) => (
-                <motion.li
-                  key={area.id}
-                  variants={staggerItemVariants}
-                  whileHover={{ y: -4, scale: 1.015 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 26 }}
-                  className={serviceAreaCardClass}
-                >
-                  <h4 className="text-display text-lg font-semibold text-accent">
-                    {area.name}
-                  </h4>
-                  <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
-                    {area.description}
-                  </p>
-                </motion.li>
-              ))}
-            </motion.ul>
-          )}
-
-          <Reveal from="up" delay={0.08} className="block">
-            <p className="mx-auto mt-8 max-w-2xl text-center font-sans text-sm text-muted">
-              {lp.serviceAreasFootnote}
-            </p>
-
-            <p className="mt-10 text-center font-sans text-sm text-muted">
-              <span className="font-medium text-foreground/90">
-                {copy.footer.location}
-              </span>{" "}
-              —{" "}
-              <Link
-                href={routes.location}
-                className="text-accent underline-offset-2 hover:underline"
-              >
-                {copy.footer.mapLinkLabel}
-              </Link>{" "}
-              {copy.ui.serviceAreasCoverageSuffix}
-            </p>
-          </Reveal>
-        </section>
       </div>
     </section>
   );

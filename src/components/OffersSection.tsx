@@ -52,7 +52,7 @@ export function OffersSection() {
                     alt=""
                     fill
                     unoptimized
-                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md sm:scale-[1.32]"
+                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:opacity-90 group-focus-within:opacity-90 sm:scale-[1.32]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={false}
                   />
@@ -85,14 +85,19 @@ export function OffersSection() {
             variants={staggerContainerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
+            viewport={{ once: true, amount: 0.38 }}
           >
             {copy.offers.items.map((offer, i) => (
               <motion.li
                 key={offer.title}
                 variants={staggerItemVariants}
-                whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 380, damping: 26 }}
+                whileHover={{ y: -6 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 280,
+                  damping: 32,
+                  mass: 0.9,
+                }}
                 className={offerCardClass}
               >
                 <div className="absolute inset-0 overflow-hidden rounded-2xl bg-background">
@@ -101,7 +106,7 @@ export function OffersSection() {
                     alt=""
                     fill
                     unoptimized
-                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:blur-md group-focus-within:blur-md sm:scale-[1.32]"
+                    className="object-contain object-center scale-[1.28] transition duration-500 ease-out group-hover:opacity-90 group-focus-within:opacity-90 sm:scale-[1.32]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={false}
                   />
