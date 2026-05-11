@@ -170,25 +170,11 @@ body {
   }
 }
 
-/* Instagram (EmbedSocial): mobile horizontal scroll — same pattern as anawebapp */
+/* Instagram (Elfsight): allow wide embed to scroll horizontally on small screens */
 @media (max-width: 768px) {
   .instagram-embed-mobile-scroll .instagram-embed-inner {
     min-width: max-content;
     width: max-content;
-  }
-  .instagram-embed-mobile-scroll .embedsocial-hashtag {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    width: max-content !important;
-    min-height: 360px;
-    gap: 1rem !important;
-  }
-  .instagram-embed-mobile-scroll .embedsocial-hashtag > * {
-    flex: 0 0 auto !important;
-    width: 280px !important;
-    min-width: 280px !important;
-    max-width: 280px !important;
-    scroll-snap-align: center;
   }
 }
 

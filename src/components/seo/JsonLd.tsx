@@ -12,7 +12,7 @@ export function JsonLd() {
       name: "Sovereign Roofing",
       description: defaultDescription,
       url: siteUrl,
-      telephone: "+1-305-205-4016",
+      telephone: "+1-754-329-4412",
       areaServed: {
         "@type": "AdministrativeArea",
         name: "Florida",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, type RefObject } from "react";
 
 type UseClipLoopVideoWhenVisibleOptions = {
   /**
@@ -23,8 +23,6 @@ export function useClipLoopVideoWhenVisible(
     threshold = 0,
   }: UseClipLoopVideoWhenVisibleOptions,
 ) {
-  const clipRef = useRef(clipDurationSec ?? 0);
-  clipRef.current = clipDurationSec ?? 0;
   const hasClip =
     typeof clipDurationSec === "number" &&
     Number.isFinite(clipDurationSec) &&
@@ -48,7 +46,7 @@ export function useClipLoopVideoWhenVisible(
       rafId = 0;
       if (!hasClip || !intersecting || document.hidden) return;
 
-      const clip = clipRef.current;
+      const clip = clipDurationSec ?? 0;
       const t = el.currentTime;
       if (Number.isFinite(t) && t >= clip) {
         el.currentTime = 0;
@@ -66,7 +64,7 @@ export function useClipLoopVideoWhenVisible(
 
     const tryPlay = () => {
       if (!intersecting || document.hidden) return;
-      if (hasClip && el.currentTime >= clipRef.current) el.currentTime = 0;
+      if (hasClip && el.currentTime >= (clipDurationSec ?? 0)) el.currentTime = 0;
       startRaf();
       void el.play().catch(() => {});
     };
@@ -107,5 +105,5 @@ export function useClipLoopVideoWhenVisible(
       document.removeEventListener("visibilitychange", onVisibility);
       stop();
     };
-  }, [clipDurationSec, hasClip, rootMargin, threshold]);
+  }, [clipDurationSec, hasClip, ref, rootMargin, threshold]);
 }

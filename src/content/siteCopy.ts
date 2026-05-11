@@ -54,8 +54,8 @@ export const siteCopy = {
       },
     ],
   },
-  phoneDisplay: "+1 (305) 205-4016",
-  phoneTel: "+13052054016",
+  phoneDisplay: "+1 (754) 329-4412",
+  phoneTel: "+17543294412",
   heroLeadingMark: "",
   hero: {
     subhead:
@@ -172,40 +172,76 @@ export const siteCopy = {
       "Residential roofing — replacement, repair, and storm-ready systems.",
     items: [
       {
-        title: "Roof replacement",
+        title: "Re-Roofs & roof replacement",
         description:
           "Full tear-off and re-roof with quality underlayment, flashing, and ventilation — built to manufacturer specs and local code.",
         cta: "Discuss replacement",
+        imageSrc: "/portfolio/project-07-suburban-reroof.png",
+        imageAlt: "Fresh residential roof replacement on a South Florida home",
       },
       {
-        title: "Repairs & leaks",
+        title: "Emergency repairs & leaks",
         description:
-          "Targeted fixes for storm damage, worn valleys, flashing failures, and penetrations — with clear photos and scope before we start.",
+          "Fast help for active leaks, storm damage, worn valleys, flashing failures, and penetrations — with clear photos and scope before we start.",
         cta: "Request a repair",
+        imageSrc: "/portfolio/project-10-valley-shingles.png",
+        imageAlt: "Architectural shingle roof valley detail after repair work",
       },
       {
         title: "Shingle roofing",
         description:
           "Architectural and designer shingles with wind ratings suited to coastal exposure — color and warranty options explained up front.",
         cta: "See shingle options",
+        imageSrc: "/portfolio/project-05-architectural-shingles.png",
+        imageAlt: "Architectural asphalt shingles on a residential roof",
       },
       {
         title: "Metal roofing",
         description:
           "Standing seam and panel systems for durability and clean lines — ideal when you want long life and low maintenance.",
         cta: "Ask about metal",
+        imageSrc: "/portfolio/project-04-metal-roof.png",
+        imageAlt: "Modern grey metal roof on a contemporary home",
       },
       {
         title: "Inspections",
         description:
           "Honest assessments for real estate, insurance, or peace of mind — what’s urgent, what can wait, and what to budget for.",
         cta: "Schedule inspection",
+        imageSrc: "/portfolio/project-09-aerial-shingle-detail.png",
+        imageAlt: "Aerial roof inspection view of architectural shingles",
       },
       {
-        title: "Storm & insurance",
+        title: "Insurance claims & storm damage",
         description:
           "Documentation and coordination support after wind or hail — we help you understand scope alongside your adjuster.",
-        cta: "Storm help",
+        cta: "Claims support",
+        imageSrc: "/service-areas/areas-we-serve-roofing-crew.jpg",
+        imageAlt: "Roofing crew preparing storm damage repair work",
+      },
+      {
+        title: "Tile roofing",
+        description:
+          "Concrete and barrel tile roof service for Mediterranean and coastal homes — repair, replacement, and underlayment planning.",
+        cta: "Ask about tile",
+        imageSrc: "/portfolio/project-11-barrel-tile.png",
+        imageAlt: "Mediterranean home with a grey barrel tile roof",
+      },
+      {
+        title: "Flat roof systems",
+        description:
+          "Low-slope and flat roof membranes for additions, commercial buildings, and Florida sun exposure — detailed seams, drainage, and flashing.",
+        cta: "Plan flat roofing",
+        imageSrc: "/portfolio/project-02-commercial-membrane.png",
+        imageAlt: "Commercial flat roof with a white membrane system",
+      },
+      {
+        title: "Gutter installation",
+        description:
+          "Gutter installation and drainage planning to move Florida rain away from fascia, foundations, entries, and landscaping.",
+        cta: "Plan gutters",
+        imageSrc: "/portfolio/project-03-mediterranean-estate.png",
+        imageAlt: "South Florida home exterior suited for gutter installation",
       },
     ],
   },
@@ -250,11 +286,14 @@ export const siteCopy = {
   about: {
     title: "About",
     body: [
-      "Sovereign Roofing focuses on residential roofs — replacement, repair, and storm recovery — with clear communication from inspection to final walkthrough.",
+      "Sovereign Roofing is a minority-owned roofing company serving South Florida homeowners and businesses with re-roofs, emergency repairs, maintenance, gutter installation, and insurance claim support.",
+      "Our team keeps the process clear from inspection to final walkthrough, with straightforward scopes, photo documentation, and clean job sites.",
     ],
-    credentials: "Licensed & insured · South Florida",
+    credentials: "Minority-owned · Licensed & insured · South Florida",
     cta: "Work with Sovereign",
-    quote: "Honest schedules. Finish work you notice every day.",
+    quote: "Local roofing, accountable crews, and communication you can plan around.",
+    imageSrc: "/service-areas/areas-we-serve-roofing-crew.jpg",
+    imageAlt: "Sovereign Roofing team placeholder on a South Florida roofing jobsite",
   },
   contact: {
     title: "Contact",
@@ -365,7 +404,6 @@ export const siteCopy = {
     quoteSubmitSuccess: "We will be in contact shortly.",
     quoteSubmitError:
       "We couldn’t send that just now. Please try again or email us directly.",
-    instagramIframeTitle: "Sovereign Roofing — Instagram feed",
   },
 };
 

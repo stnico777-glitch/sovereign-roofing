@@ -6,7 +6,7 @@ export const siteUrl =
 /** Public inbox for forms and mailto links — override in Vercel with `NEXT_PUBLIC_CONTACT_EMAIL`. */
 export const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ||
-  "sovereignroofing.miami@gmail.com";
+  "sfernandez@sovroof.com";
 
 /** Instagram profile path (no @). Override with `NEXT_PUBLIC_INSTAGRAM_HANDLE`. */
 export const instagramHandle =
@@ -31,7 +31,7 @@ export const defaultDescription =
   "Roof replacement, repairs, inspections, and storm-ready systems. Sovereign Roofing delivers honest estimates, clean job sites, and workmanship you can see from the curb.";
 
 /** Homepage hero: loop first N seconds of `/hero.mp4` before restarting. */
-export const heroOpeningClipDurationSec = 10;
+export const heroOpeningClipDurationSec = 14;
 
 /** Portfolio “On site” dual-strip reel: each clip loops its first N seconds (forward + reversed). */
 export const portfolioReelClipDurationSec = 7;

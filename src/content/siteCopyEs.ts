@@ -57,8 +57,8 @@ export const siteCopyEs: SiteCopy = {
       },
     ],
   },
-  phoneDisplay: "+1 (305) 205-4016",
-  phoneTel: "+13052054016",
+  phoneDisplay: "+1 (754) 329-4412",
+  phoneTel: "+17543294412",
   heroLeadingMark: "",
   hero: {
     subhead:
@@ -172,40 +172,76 @@ export const siteCopyEs: SiteCopy = {
       "Techado residencial: reemplazo, reparación y sistemas listos para tormentas.",
     items: [
       {
-        title: "Reemplazo de techo",
+        title: "Re-techados y reemplazo",
         description:
           "Desmontaje completo y techo nuevo con base, regletas y ventilación según especificación del fabricante y código local.",
         cta: "Hablar de reemplazo",
+        imageSrc: "/portfolio/project-07-suburban-reroof.png",
+        imageAlt: "Reemplazo de techo residencial terminado en una casa del Sur de Florida",
       },
       {
-        title: "Reparaciones y goteras",
+        title: "Reparaciones de emergencia y goteras",
         description:
-          "Arreglos puntuales por tormenta, valles gastados, fallas de regleta y penetraciones — con fotos y alcance claro antes de empezar.",
+          "Ayuda rápida para goteras activas, daño por tormenta, valles gastados, fallas de regleta y penetraciones — con fotos y alcance claro antes de empezar.",
         cta: "Solicitar reparación",
+        imageSrc: "/portfolio/project-10-valley-shingles.png",
+        imageAlt: "Detalle de valle de techo con tejas arquitectónicas después de reparación",
       },
       {
         title: "Teja asfáltica",
         description:
           "Tejas arquitectónicas y de diseño con calificaciones de viento para exposición costera — color y garantía explicados al inicio.",
         cta: "Ver opciones de teja",
+        imageSrc: "/portfolio/project-05-architectural-shingles.png",
+        imageAlt: "Tejas asfálticas arquitectónicas en un techo residencial",
       },
       {
         title: "Techo metálico",
         description:
           "Paneles y costuras para durabilidad y líneas limpias — ideal si buscas larga vida y poco mantenimiento.",
         cta: "Preguntar por metal",
+        imageSrc: "/portfolio/project-04-metal-roof.png",
+        imageAlt: "Techo metálico gris moderno en una vivienda contemporánea",
       },
       {
         title: "Inspecciones",
         description:
           "Evaluaciones honestas para compraventa, seguro o tranquilidad — qué es urgente, qué puede esperar y qué presupuestar.",
         cta: "Agendar inspección",
+        imageSrc: "/portfolio/project-09-aerial-shingle-detail.png",
+        imageAlt: "Vista aérea de inspección de techo con tejas arquitectónicas",
       },
       {
-        title: "Tormenta y seguro",
+        title: "Reclamos de seguro y daño por tormenta",
         description:
           "Documentación y apoyo de coordinación tras viento o granizo — te ayudamos a entender el alcance junto a tu ajustador.",
-        cta: "Ayuda por tormenta",
+        cta: "Apoyo con reclamos",
+        imageSrc: "/service-areas/areas-we-serve-roofing-crew.jpg",
+        imageAlt: "Cuadrilla de techado preparando reparación por daño de tormenta",
+      },
+      {
+        title: "Techo de teja",
+        description:
+          "Servicio para techos de teja de concreto y barril en viviendas mediterráneas y costeras: reparación, reemplazo y planificación de base.",
+        cta: "Preguntar por teja",
+        imageSrc: "/portfolio/project-11-barrel-tile.png",
+        imageAlt: "Casa mediterránea con techo de teja barril gris",
+      },
+      {
+        title: "Sistemas de techo plano",
+        description:
+          "Membranas para techos planos o de baja pendiente en adiciones, comercios y sol de Florida: costuras, drenaje y regletas detalladas.",
+        cta: "Planear techo plano",
+        imageSrc: "/portfolio/project-02-commercial-membrane.png",
+        imageAlt: "Techo plano comercial con sistema de membrana blanca",
+      },
+      {
+        title: "Instalación de gutters",
+        description:
+          "Instalación de gutters y planificación de drenaje para alejar la lluvia de Florida de fascia, cimientos, entradas y jardinería.",
+        cta: "Planear gutters",
+        imageSrc: "/portfolio/project-03-mediterranean-estate.png",
+        imageAlt: "Exterior de vivienda del Sur de Florida adecuado para instalación de gutters",
       },
     ],
   },
@@ -248,11 +284,14 @@ export const siteCopyEs: SiteCopy = {
   about: {
     title: "Nosotros",
     body: [
-      "Sovereign Roofing se enfoca en techos residenciales — reemplazo, reparación y recuperación por tormentas — con comunicación clara de la inspección a la entrega final.",
+      "Sovereign Roofing es una compañía de techado de propiedad minoritaria que atiende a propietarios y negocios del Sur de Florida con re-techados, reparaciones de emergencia, mantenimiento, instalación de gutters y apoyo con reclamos de seguro.",
+      "Nuestro equipo mantiene el proceso claro desde la inspección hasta la entrega final, con alcances directos, documentación con fotos y obras limpias.",
     ],
-    credentials: "Licenciados y asegurados · Sur de Florida",
+    credentials: "Propiedad minoritaria · Licenciados y asegurados · Sur de Florida",
     cta: "Trabajar con Sovereign",
-    quote: "Plazos honestos. Acabados que notas cada día.",
+    quote: "Techado local, cuadrillas responsables y comunicación con la que puedes planificar.",
+    imageSrc: "/service-areas/areas-we-serve-roofing-crew.jpg",
+    imageAlt: "Imagen temporal del equipo de Sovereign Roofing en una obra de techado del Sur de Florida",
   },
   contact: {
     title: "Contacto",
@@ -359,7 +398,6 @@ export const siteCopyEs: SiteCopy = {
     quoteSubmitSuccess: "Nos pondremos en contacto en breve.",
     quoteSubmitError:
       "No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos por correo.",
-    instagramIframeTitle: "Sovereign Roofing — feed de Instagram",
   },
 };
 

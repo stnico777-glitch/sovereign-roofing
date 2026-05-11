@@ -1,159 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { ElfsightWidget } from "react-elfsight-widget";
 import { useLocale } from "@/context/LocaleContext";
 import { instagramHandle } from "@/lib/site";
 
-const EMBEDSOCIAL_SCRIPT_ID = "EmbedSocialHashtagScript";
-
 const IG_EMBED_SKELETON_CLASS =
   "instagram-embed-inner min-h-[380px] w-full rounded-lg border border-border/60 bg-surface-muted/50 md:min-h-[480px]";
 
-/** Preload feed before it enters view so EmbedSocial has time to paint */
-const IG_LAZY_ROOT_MARGIN_PX = 900;
-
-type EmbedSocialApi = {
-  getEmbedData: (ref: string, node: Element) => void;
-};
-
-function isNearViewport(el: Element, marginPx: number): boolean {
-  const r = el.getBoundingClientRect();
-  const vh = typeof window !== "undefined" ? window.innerHeight : 0;
-  return r.top < vh + marginPx && r.bottom > -marginPx;
-}
-
-function EmbedSocialWidget({ dataRef }: { dataRef: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!dataRef || !containerRef.current) return;
-    document.getElementById(EMBEDSOCIAL_SCRIPT_ID)?.remove();
-
-    const runEmbedSocial = () => {
-      const root = containerRef.current;
-      if (!root) return;
-      const el = root.querySelector(".embedsocial-hashtag");
-      const api = (window as unknown as { EMBEDSOCIALHASHTAG?: EmbedSocialApi })
-        .EMBEDSOCIALHASHTAG;
-      if (el && api?.getEmbedData) {
-        el.classList.add("embedsocial-widget-loading");
-        api.getEmbedData(dataRef.trim(), el);
-      }
-    };
-
-    const script = document.createElement("script");
-    script.id = EMBEDSOCIAL_SCRIPT_ID;
-    script.src = "https://embedsocial.com/cdn/ht.js";
-    script.async = true;
-    script.onload = () => {
-      runEmbedSocial();
-      requestAnimationFrame(runEmbedSocial);
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      document.getElementById(EMBEDSOCIAL_SCRIPT_ID)?.remove();
-    };
-  }, [dataRef]);
-
-  return (
-    <div ref={containerRef} className={IG_EMBED_SKELETON_CLASS}>
-      <div className="embedsocial-hashtag" data-ref={dataRef} />
-    </div>
-  );
-}
-
-function LazyInstagramFeedEmbed({
-  embedIframeUrl,
-  embedRef,
-  iframeTitle,
-}: {
-  embedIframeUrl: string | null;
-  embedRef: string | null;
-  iframeTitle: string;
-}) {
-  const [sentinelEl, setSentinelEl] = useState<HTMLDivElement | null>(null);
-  const [load, setLoad] = useState(false);
-
-  useEffect(() => {
-    if (load || (!embedIframeUrl && !embedRef) || !sentinelEl) return;
-
-    let cancelled = false;
-    let io: IntersectionObserver | null = null;
-
-    const activate = () => {
-      if (cancelled) return;
-      setLoad(true);
-    };
-
-    const trySyncNear = () => {
-      if (isNearViewport(sentinelEl, IG_LAZY_ROOT_MARGIN_PX)) {
-        activate();
-        return true;
-      }
-      return false;
-    };
-
-    if (trySyncNear()) return;
-
-    const raf = requestAnimationFrame(() => {
-      if (cancelled || trySyncNear()) return;
-      io = new IntersectionObserver(
-        ([entry]) => {
-          if (entry?.isIntersecting) {
-            io?.disconnect();
-            io = null;
-            activate();
-          }
-        },
-        { rootMargin: `${IG_LAZY_ROOT_MARGIN_PX}px 0px`, threshold: 0 },
-      );
-      io.observe(sentinelEl);
-    });
-
-    return () => {
-      cancelled = true;
-      cancelAnimationFrame(raf);
-      io?.disconnect();
-    };
-  }, [embedIframeUrl, embedRef, load, sentinelEl]);
-
-  return (
-    <div ref={setSentinelEl} className="w-full">
-      {load && embedIframeUrl ? (
-        <iframe
-          src={embedIframeUrl}
-          title={iframeTitle}
-          className="h-[400px] min-w-full shrink-0 rounded-lg border border-border/60 md:h-[500px] md:min-w-0"
-          loading="lazy"
-        />
-      ) : load && embedRef ? (
-        <EmbedSocialWidget dataRef={embedRef} />
-      ) : (
-        <div className={IG_EMBED_SKELETON_CLASS} aria-hidden />
-      )}
-    </div>
-  );
-}
-
 export type InstagramFeedSectionProps = {
   elfsightWidgetId: string | null;
-  embedRef: string | null;
-  embedIframeUrl: string | null;
 };
 
 export function InstagramFeedSection({
   elfsightWidgetId,
-  embedRef,
-  embedIframeUrl,
 }: InstagramFeedSectionProps) {
   const { copy } = useLocale();
-  const { instagram: ig, ui } = copy;
+  const { instagram: ig } = copy;
   const profileUrl = `https://www.instagram.com/${instagramHandle}/`;
-  const hasEmbed = Boolean(
-    elfsightWidgetId || embedIframeUrl || embedRef,
-  );
 
   return (
     <section
@@ -192,24 +55,16 @@ export function InstagramFeedSection({
           {ig.followCta}
         </a>
 
-        {hasEmbed ? (
+        {elfsightWidgetId ? (
           <div className="instagram-embed-mobile-scroll mt-8 overflow-hidden rounded-xl md:overflow-visible">
             <div className="instagram-embed-scroll-container flex max-h-[420px] overflow-x-auto overflow-y-hidden px-[calc((100vw-280px)/2)] -mx-[var(--container-pad)] scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:block md:max-h-none md:overflow-visible md:px-0">
-              {elfsightWidgetId ? (
-                <div className={IG_EMBED_SKELETON_CLASS}>
-                  <ElfsightWidget
-                    widgetId={elfsightWidgetId}
-                    lazy="in-viewport"
-                    className="w-full min-w-0"
-                  />
-                </div>
-              ) : (
-                <LazyInstagramFeedEmbed
-                  embedIframeUrl={embedIframeUrl}
-                  embedRef={embedRef}
-                  iframeTitle={ui.instagramIframeTitle}
+              <div className={IG_EMBED_SKELETON_CLASS}>
+                <ElfsightWidget
+                  widgetId={elfsightWidgetId}
+                  lazy="in-viewport"
+                  className="w-full min-w-0"
                 />
-              )}
+              </div>
             </div>
           </div>
         ) : (
