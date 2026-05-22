@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { PortfolioReel } from "@/components/PortfolioReel";
 import { PortfolioSection } from "@/components/PortfolioSection";
-import { PortfolioSectionRow2 } from "@/components/PortfolioSectionRow2";
 import { PageShell } from "@/components/layout/PageShell";
 import { pageMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/site";
@@ -16,8 +14,6 @@ export default function ProjectsPage() {
   return (
     <PageShell>
       <PortfolioSection />
-      <PortfolioReel />
-      <PortfolioSectionRow2 />
     </PageShell>
   );
 }

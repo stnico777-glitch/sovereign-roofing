@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { PartnerBrandsCarousel } from "@/components/PartnerBrandsCarousel";
 import { useLocale } from "@/context/LocaleContext";
-import { routes } from "@/lib/site";
+import { contractorLicenseNumber, routes } from "@/lib/site";
 
 function ChevronCircleIcon() {
   return (
@@ -63,6 +63,10 @@ export function FloridaNumberOneSection() {
         <Reveal className="mt-10 text-center md:mt-12" from="up">
           <p className="mx-auto max-w-3xl font-sans text-sm leading-relaxed text-foreground/80 md:text-base">
             {n.body}
+          </p>
+          <p className="mt-6 font-sans text-xs font-medium tracking-[0.2em] text-muted uppercase md:mt-8">
+            {copy.footer.licenseLabel}{" "}
+            <span className="text-foreground/75">{contractorLicenseNumber}</span>
           </p>
         </Reveal>
       </div>

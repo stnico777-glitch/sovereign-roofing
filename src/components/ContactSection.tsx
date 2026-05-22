@@ -6,7 +6,7 @@ import { LocationMap } from "@/components/LocationMap";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { IconMail, IconMapPin, IconPhone } from "@/components/icons/ThemeIcons";
 import { useLocale } from "@/context/LocaleContext";
-import { routes } from "@/lib/site";
+import { contractorLicenseNumber, routes } from "@/lib/site";
 
 export function ContactSection() {
   const { copy } = useLocale();
@@ -98,8 +98,14 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-2 border-t border-accent/15 pt-8 font-sans text-xs text-foreground/50 md:flex-row md:items-center md:justify-between">
+        <div className="mt-16 flex flex-col gap-2 border-t border-accent/15 pt-8 font-sans text-xs text-foreground/50 md:flex-row md:flex-wrap md:items-center md:justify-between">
           <span>© {new Date().getFullYear()} {copy.footer.rights}</span>
+          <span className="tracking-wide">
+            {copy.footer.licenseLabel}{" "}
+            <span className="font-medium text-foreground/65">
+              {contractorLicenseNumber}
+            </span>
+          </span>
           <span className="tracking-wide">{copy.footer.location}</span>
         </div>
       </div>

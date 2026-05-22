@@ -10,12 +10,8 @@ import {
   type ReactNode,
 } from "react";
 import type { SiteCopy } from "@/content/siteCopy";
-import { portfolioCards, portfolioCardsRow2, siteCopy } from "@/content/siteCopy";
-import {
-  portfolioCardsEs,
-  portfolioCardsRow2Es,
-  siteCopyEs,
-} from "@/content/siteCopyEs";
+import { portfolioCards, siteCopy } from "@/content/siteCopy";
+import { portfolioCardsEs, siteCopyEs } from "@/content/siteCopyEs";
 import type { Locale } from "@/lib/locale";
 import { isLocale, LOCALE_STORAGE_KEY } from "@/lib/locale";
 
@@ -28,7 +24,6 @@ type LocaleContextValue = {
   setLocale: (locale: Locale) => void;
   copy: SiteCopy;
   portfolioCards: readonly PortfolioCardItem[];
-  portfolioCardsRow2: readonly PortfolioCardItem[];
 };
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
@@ -61,8 +56,6 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
       setLocale,
       copy: locale === "es" ? siteCopyEs : siteCopy,
       portfolioCards: locale === "es" ? portfolioCardsEs : portfolioCards,
-      portfolioCardsRow2:
-        locale === "es" ? portfolioCardsRow2Es : portfolioCardsRow2,
     }),
     [locale, setLocale],
   );

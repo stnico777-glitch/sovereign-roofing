@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { AboutOnSiteClips } from "@/components/AboutOnSiteClips";
 import { Reveal } from "@/components/motion/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 import { routes } from "@/lib/site";
@@ -15,23 +15,12 @@ export function AboutSection() {
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-4xl">
-        <div className="flex min-w-0 flex-col gap-8 lg:flex-row lg:items-center lg:gap-8 xl:gap-10">
+        <div className="flex min-w-0 flex-col gap-8 lg:flex-row lg:items-start lg:gap-8 xl:gap-10">
           <Reveal
-            className="relative flex aspect-[4/3] min-w-0 w-full max-w-[28rem] shrink-0 overflow-hidden rounded-3xl border border-border bg-surface-muted shadow-[0_16px_48px_rgba(0,0,0,0.18)] sm:max-w-[30rem] lg:max-w-[min(100%,440px)] lg:-translate-x-2 xl:max-w-[460px] xl:-translate-x-3 dark:shadow-[0_16px_54px_rgba(0,0,0,0.42)]"
+            className="min-w-0 w-full max-w-[28rem] shrink-0 sm:max-w-[30rem] lg:max-w-[min(100%,440px)]"
             from="left"
           >
-            <Image
-              src={copy.about.imageSrc}
-              alt={copy.about.imageAlt}
-              fill
-              sizes="(max-width: 1024px) min(100vw, 30rem), 440px"
-              className="object-cover"
-              priority
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"
-              aria-hidden
-            />
+            <AboutOnSiteClips />
           </Reveal>
 
           <Reveal className="min-w-0 flex-1" from="right" delay={0.08}>

@@ -12,6 +12,7 @@ import {
   IconUser,
 } from "@/components/icons/ThemeIcons";
 import { useLocale } from "@/context/LocaleContext";
+import { contactEmail } from "@/lib/site";
 
 /** Nav icon (compass mark) as large faint watermark behind the form. */
 function QuoteCardWatermark() {
@@ -186,6 +187,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
       `${copy.ui.quoteEmailPhone}: ${phone}`,
       `${copy.ui.quoteEmailZip}: ${zip}`,
       `${copy.ui.quoteEmailProjectType}: ${typeLabel || copy.ui.quoteEmailNotSelected}`,
+      `${copy.ui.quoteEmailInbox}: ${contactEmail}`,
     ].join("\n");
 
     const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
@@ -209,6 +211,7 @@ export function QuoteRequestForm({ variant, idPrefix }: QuoteRequestFormProps) {
             message: messageBody,
             replyto: email,
             from_name: name || "Sovereign Roofing lead",
+            to_email: contactEmail,
             botcheck: "",
           }),
         });

@@ -33,7 +33,7 @@ function SpotlightCardBody({
         src={item.imageSrc}
         alt={item.alt}
         fill
-        sizes="(max-width:768px) min(100vw, 17rem), 19rem"
+        sizes="(max-width: 640px) min(100vw, 18rem), (max-width: 1024px) 50vw, 33vw"
         className="object-cover"
         priority={priority}
       />
@@ -59,18 +59,16 @@ function SpotlightCardBody({
   );
 }
 
-/** ~50% footprint vs full-width column; centered in each grid cell */
 const cardShell =
-  "relative aspect-[4/5] mx-auto w-full max-w-[min(100%,17rem)] overflow-hidden rounded-2xl border border-border bg-surface-muted shadow-[0_8px_28px_rgba(0,0,0,0.18)] sm:max-w-[min(100%,18rem)] md:max-w-[min(100%,19rem)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.45)]";
+  "relative aspect-[4/5] mx-auto w-full max-w-[min(100%,18rem)] overflow-hidden rounded-2xl border border-border bg-surface-muted shadow-[0_8px_28px_rgba(0,0,0,0.18)] sm:max-w-[min(100%,19rem)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.45)]";
 
 const gridClass =
-  "mx-auto grid w-full max-w-4xl justify-items-center gap-10 md:grid-cols-2 md:gap-16";
+  "mx-auto grid w-full max-w-6xl justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3";
 
 export function ServicesSpotlight() {
   const { copy } = useLocale();
   const sp = copy.servicesSpotlight;
   const reduce = useReducedMotion();
-  const [first, second] = sp.items;
 
   return (
     <section
@@ -97,12 +95,15 @@ export function ServicesSpotlight() {
 
         {reduce ? (
           <div className={gridClass}>
-            <article className={cardShell}>
-              <SpotlightCardBody item={first} cta={sp.cta} priority />
-            </article>
-            <article className={cardShell}>
-              <SpotlightCardBody item={second} cta={sp.cta} />
-            </article>
+            {sp.items.map((item, index) => (
+              <article className={cardShell} key={item.title}>
+                <SpotlightCardBody
+                  item={item}
+                  cta={sp.cta}
+                  priority={index < 3}
+                />
+              </article>
+            ))}
           </div>
         ) : (
           <motion.div
@@ -112,32 +113,26 @@ export function ServicesSpotlight() {
             viewport={{ once: true, amount: 0.38 }}
             className={gridClass}
           >
-            <motion.article
-              variants={staggerItemVariants}
-              whileHover={{ y: -3, scale: 1.02 }}
-              transition={{
-                type: "spring",
-                stiffness: 280,
-                damping: 32,
-                mass: 0.9,
-              }}
-              className={cardShell}
-            >
-              <SpotlightCardBody item={first} cta={sp.cta} priority />
-            </motion.article>
-            <motion.article
-              variants={staggerItemVariants}
-              whileHover={{ y: -3, scale: 1.02 }}
-              transition={{
-                type: "spring",
-                stiffness: 280,
-                damping: 32,
-                mass: 0.9,
-              }}
-              className={cardShell}
-            >
-              <SpotlightCardBody item={second} cta={sp.cta} />
-            </motion.article>
+            {sp.items.map((item, index) => (
+              <motion.article
+                key={item.title}
+                variants={staggerItemVariants}
+                whileHover={{ y: -3, scale: 1.02 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 280,
+                  damping: 32,
+                  mass: 0.9,
+                }}
+                className={cardShell}
+              >
+                <SpotlightCardBody
+                  item={item}
+                  cta={sp.cta}
+                  priority={index < 3}
+                />
+              </motion.article>
+            ))}
           </motion.div>
         )}
       </div>

@@ -30,8 +30,11 @@ export const defaultTitle =
 export const defaultDescription =
   "Roof replacement, repairs, inspections, and storm-ready systems. Sovereign Roofing delivers honest estimates, clean job sites, and workmanship you can see from the curb.";
 
+/** Florida contractor license — required on site (CCC). */
+export const contractorLicenseNumber = "CCC1336048";
+
 /** Homepage hero: loop first N seconds of `/hero.mp4` before restarting. */
 export const heroOpeningClipDurationSec = 14;
 
-/** Portfolio “On site” dual-strip reel: each clip loops its first N seconds (forward + reversed). */
-export const portfolioReelClipDurationSec = 7;
+/** About on-site clips: loop the first N seconds of each video. */
+export const onSiteClipDurationSec = 7;
